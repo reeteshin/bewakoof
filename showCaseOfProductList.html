@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ShowCase Of Product</title>
+    <style>
+      #mainDiv {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        border: 1px solid red;
+      }
+      #leftDiv {
+        height: 50px;
+        border: 1px solid green;
+        overflow: scroll;
+      }
+      #rightDiv {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        height: 700px;
+        border: 1px solid yellow;
+        overflow: auto;
+        justify-content: space-between;
+        margin: 10px;
+         
+      }
+       #rightSubDiv >img
+       {
+           width: 250px;
+           height: 300px;
+       }
+        #rightSubDiv >p
+       {
+            padding: 0px 10px 0px 0px;
+       }
+    </style>
+  </head>
+  <body>
+    <div id="mainDiv">
+      <div id="leftDiv">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
+          omnis sed eos porro quos! Ex numquam molestiae ratione. Nesciunt,
+          dolorum velit. Dicta possimus cupiditate sed incidunt provident
+          laudantium eum fuga?
+        </p>
+      </div>
+      <div id="rightDiv"></div>
+    </div>
+  </body>
+</html>
+<script>
+    var rightDiv =  document.getElementById("rightDiv")
+    console.log("here")
+    var dataOfProduct = 
+    [{
+        imgUrl:"https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
+        name:"Iron Face Half Sleeve T-Shirt (AVL) Black",
+        price: 499,
+    },{
+        imgUrl:"https://images.bewakoof.com/t320/pocket-joint-sun-active-t-shirt-men-s-printed-t-shirts-262558-1579955492.gif",
+        name:"Iron Face Half Sleeve T-Shirt (AVL) Black",
+        price: 499,
+    },{
+        imgUrl:"https://images.bewakoof.com/t320/world-peace-full-sleeve-t-shirt-men-s-printed-full-sleeve-t-shirt-231490-1631886128.jpg",
+        name:"Iron Face Half Sleeve T-Shirt (AVL) Black",
+        price: 499,
+    },{
+        imgUrl:"https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
+        name:"Iron Face Half Sleeve T-Shirt (AVL) Black",
+        price: 499,
+    },{
+        imgUrl:"https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
+        name:"Iron Face Half Sleeve T-Shirt (AVL) Black",
+        price: 499,
+    },{
+        imgUrl:"https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
+        name:"Iron Face Half Sleeve T-Shirt (AVL) Black",
+        price: 499,
+    },{
+        imgUrl:"https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
+        name:"Iron Face Half Sleeve T-Shirt <br>(AVL) Black",
+        price: 499,
+    },{
+        imgUrl:"https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
+        name:"Iron Face Half Sleeve T-Shirt (AVL) Black",
+        price: 499,
+    },
+             
+    ]
+
+    dataOfProduct.map(function (item)
+    {
+    var div = document.createElement("div");
+    div.setAttribute("id","rightSubDiv")
+
+    var img = document.createElement("img");
+    img.setAttribute("src", item.imgUrl);
+
+    var p = document.createElement("p");
+    p.innerHTML = item.name;
+
+    var pPrice = document.createElement("p");
+    pPrice.textContent = `MRP ${item.price}`;
+    div.append(img,p,pPrice);
+    rightDiv.append(div)
+    })
+</script>
