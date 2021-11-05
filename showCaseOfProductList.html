@@ -4,104 +4,173 @@
     <title>ShowCase Of Product</title>
     <style>
       #mainDiv {
+        border: 1px solid slateblue;
         display: grid;
-        grid-template-columns: 30% 70%;
-        border: 1px solid red;
+        grid-template-columns: 20% 80%;
+        margin-top: 40px;
+        
       }
+
       #leftDiv {
-        height: 50px;
-        border: 1px solid green;
+        height: 700px;
+        border: 1px solid red;
         overflow: scroll;
+        margin-left: 20px;
+         
       }
       #rightDiv {
         display: grid;
-        grid-template-columns: 30% 30% 30%;
+        grid-template-columns: 33% 33% 33%;
         height: 700px;
-        border: 1px solid yellow;
-        overflow: auto;
-        justify-content: space-between;
-        margin: 10px;
+        border: 1px solid red;
+        overflow: scroll;
+        justify-content: center;
+        margin-left: 30px;
          
       }
-       #rightSubDiv >img
-       {
-           width: 250px;
-           height: 300px;
-       }
-        #rightSubDiv >p
-       {
-            padding: 0px 10px 0px 0px;
-       }
+      #rightDiv::-webkit-scrollbar,
+      #leftDiv::-webkit-scrollbar {
+        display: none;  
+      }
+      #rightSubDiv > img {
+        width: 220px;
+        height: 270px;
+        cursor: pointer;
+      }
+      #rightSubDiv > p {
+        padding: 0px 150px 0px 0px;
+        cursor: pointer;
+      }
+      #leftDiv > h1,
+      #leftDiv > h2 {
+        background-color: rgb(77, 128, 128);
+        color: white;
+        border-radius: 3px;
+        padding-left: 5px;
+      }
+      #leftDiv > ul {
+        list-style: none;
+        cursor: pointer;
+        color: rgb(41, 233, 223);
+      }
     </style>
   </head>
   <body>
+    <h1>Dyanamic Headding</h1>
     <div id="mainDiv">
       <div id="leftDiv">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora
-          omnis sed eos porro quos! Ex numquam molestiae ratione. Nesciunt,
-          dolorum velit. Dicta possimus cupiditate sed incidunt provident
-          laudantium eum fuga?
-        </p>
+        <h1>Filter</h1>
+        <h2>Gender</h2>
+        <ul>
+          <li>Woman</li>
+          <li>Men</li>
+          <li>Unisex</li>
+        </ul>
+        <h2>Category</h2>
+        <ul>
+          <li>T-Shirt</li>
+          <li>Jacket</li>
+        </ul>
+        <h2>Size</h2>
+        <ul>
+          <li>S</li>
+          <li>M</li>
+          <li>L</li>
+        </ul>
+        <h2>Colore</h2>
+        <ul>
+          <li>Red</li>
+          <li>Blue</li>
+        </ul>
+        <h2>Brand</h2>
+        <ul>
+          <li>BewaKoof</li>
+          <li>Deyann</li>
+        </ul>
+        <h2>Sort By</h2>
+        <ul>
+          <li>Popular</li>
+          <li>New</li>
+          <li>High to Low</li>
+          <li>Low to High</li>
+        </ul>
       </div>
       <div id="rightDiv"></div>
     </div>
   </body>
 </html>
 <script>
-    var rightDiv =  document.getElementById("rightDiv")
-    console.log("here")
-    var dataOfProduct = 
-    [{
-        imgUrl:"https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
-        name:"Iron Face Half Sleeve T-Shirt (AVL) Black",
-        price: 499,
-    },{
-        imgUrl:"https://images.bewakoof.com/t320/pocket-joint-sun-active-t-shirt-men-s-printed-t-shirts-262558-1579955492.gif",
-        name:"Iron Face Half Sleeve T-Shirt (AVL) Black",
-        price: 499,
-    },{
-        imgUrl:"https://images.bewakoof.com/t320/world-peace-full-sleeve-t-shirt-men-s-printed-full-sleeve-t-shirt-231490-1631886128.jpg",
-        name:"Iron Face Half Sleeve T-Shirt (AVL) Black",
-        price: 499,
-    },{
-        imgUrl:"https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
-        name:"Iron Face Half Sleeve T-Shirt (AVL) Black",
-        price: 499,
-    },{
-        imgUrl:"https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
-        name:"Iron Face Half Sleeve T-Shirt (AVL) Black",
-        price: 499,
-    },{
-        imgUrl:"https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
-        name:"Iron Face Half Sleeve T-Shirt (AVL) Black",
-        price: 499,
-    },{
-        imgUrl:"https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
-        name:"Iron Face Half Sleeve T-Shirt <br>(AVL) Black",
-        price: 499,
-    },{
-        imgUrl:"https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
-        name:"Iron Face Half Sleeve T-Shirt (AVL) Black",
-        price: 499,
-    },
-             
-    ]
-
-    dataOfProduct.map(function (item)
+  var rightDiv = document.getElementById("rightDiv");
+  console.log("here");
+  var dataOfProduct = [
     {
+      imgUrl:
+        "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
+      name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
+      price: 499,
+    },
+    {
+      imgUrl:
+        "https://images.bewakoof.com/t320/pocket-joint-sun-active-t-shirt-men-s-printed-t-shirts-262558-1579955492.gif",
+      name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
+      price: 499,
+    },
+    {
+      imgUrl:
+        "https://images.bewakoof.com/t320/world-peace-full-sleeve-t-shirt-men-s-printed-full-sleeve-t-shirt-231490-1631886128.jpg",
+      name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
+      price: 499,
+    },
+    {
+      imgUrl:
+        "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
+      name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
+      price: 499,
+    },
+    {
+      imgUrl:
+        "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
+      name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
+      price: 499,
+    },
+    {
+      imgUrl:
+        "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
+      name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
+      price: 499,
+    },
+    {
+      imgUrl:
+        "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
+      name: "Iron Face Half Sleeve T-Shirt <br>(AVL) Black",
+      price: 499,
+    },
+    {
+      imgUrl:
+        "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
+      name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
+      price: 499,
+    },
+  ];
+
+  dataOfProduct.map(function (item) {
     var div = document.createElement("div");
-    div.setAttribute("id","rightSubDiv")
+    div.setAttribute("id", "rightSubDiv");
 
     var img = document.createElement("img");
     img.setAttribute("src", item.imgUrl);
 
+    var button = document.createElement("button");
+    
+    button.textContent="button"
+
+
     var p = document.createElement("p");
-    p.innerHTML = item.name;
+    p.textContent = item.name;
 
     var pPrice = document.createElement("p");
     pPrice.textContent = `MRP ${item.price}`;
-    div.append(img,p,pPrice);
-    rightDiv.append(div)
-    })
+    div.append(img,button, p, pPrice);
+    rightDiv.append(div);
+  });
 </script>
