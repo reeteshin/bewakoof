@@ -1,0 +1,226 @@
+#main {
+  
+   
+  display: flex;
+  flex-direction: row;
+  border: 1px solid transparent;
+  justify-content: space-between;
+  gap: 2%;
+  line-height: 1;
+  font-family: montserrat, sans-serif;
+  font-size: 20px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 1%;
+}
+
+#small_icon,
+#image_containt,
+#detail_containt {
+  border: 1px solid transparent;
+}
+
+#small_icon {
+  width: 18%;
+   
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  row-gap: 20px;
+   
+  margin-top: 0%;
+}
+
+#small_icon button {
+  height: 22%;
+  width: 40%;
+  margin-left: 30%;
+}
+
+#small_icon > button > img {
+  height: 100%;
+  width: 100%;
+}
+
+#image_containt {
+  
+}
+
+#detail_containt {
+  width: 40%;
+}
+#head_1 {
+  color: blue;
+  font-weight: bolder;
+}
+
+#name_tag {
+  font-weight: normal;
+  font-size: 21px;
+  color: black;
+}
+#price_tag {
+  font-size: 45px;
+  line-height: 0px;
+}
+#discount_tag {
+  text-decoration: line-through;
+  color: rgba(49, 48, 48, 0.705);
+  margin-top: 1px;
+  margin-bottom: 60px;
+}
+#tax_info {
+  font-weight: lighter;
+  color: rgba(49, 48, 48, 0.705);
+  line-height: 1px;
+}
+
+#other_info {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  border-radius: 8px;
+  margin-top: 0px;
+}
+#other_info > a:last-child {
+  color: rgba(49, 48, 48, 0.705);
+  text-decoration: underline;
+  font-size: 15px;
+  margin-top: 5%;
+}
+#color_name_container {
+  height: 35px;
+  border: 1px solid transparent;
+  padding: 2%;
+  font-size: 20px;
+}
+
+.size {
+  border: 1px solid transparent;
+  height: 60px;
+  width: 60px;
+  border-radius: 4px;
+  margin-left: 2px;
+  margin-top: 6px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: blue;
+  padding: 2%;
+}
+
+#bt1 {
+  background-color: white;
+}
+
+#bt2 {
+  background-color: black;
+}
+#bt3 {
+  background-color: rgb(20, 28, 48);
+}
+#bt4 {
+  background-color: rgb(157, 32, 47);
+}
+#bt5 {
+  background-color: rgb(175, 182, 192);
+}
+#bt6 {
+  background-color: rgb(97, 108, 194);
+}
+#bt7 {
+  background-color: rgb(254, 237, 63);
+}
+#bt8 {
+  background-color: rgb(171, 237, 247);
+}
+#size_intro {
+  display: flex;
+  justify-content: space-between;
+  font-size: 23px;
+}
+#select_size {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#size_intro > a:last-child {
+  font-weight: bolder;
+  text-decoration: underline;
+  font-size: 18px;
+  color: rgb(66, 162, 162);
+}
+#select_size {
+  display: flex;
+}
+#select_size > button {
+  border: 1px solid rgba(12, 10, 10, 0.281);
+  height: 62px;
+  width: 62px;
+  text-align: center;
+  font-size: 25px;
+  border-style: double;
+}
+#fab_bag {
+  margin-top: 40px;
+  display: flex;
+  width: 100%;
+  border: 1px solid transparent;
+  justify-content: space-between;
+}
+#fab_bag > button {
+  height: 65px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#fab {
+  width: 65px;
+  border: 1px solid rgb(6, 97, 97);
+}
+#cart {
+  width: 83%;
+  border: 1px solid transparent;
+  background-color: rgb(66, 162, 162);
+  color: white;
+  font-size: 25px;
+}
+#fab img {
+  height: 100%;
+  width: 100%;
+}
+
+#delivery {
+  font-size: 25px;
+}
+#delivery button {
+  height: 60px;
+  width: 100px;
+}
+#btn {
+  border: 2px solid transparent;
+
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: rgb(66, 162, 162);
+  background-color: white;
+}
+#div_min {
+  border: 1px solid black;
+  display: flex;
+  height: 60px;
+  border-radius: 10px;
+  justify-content: space-around;
+}
+#div_min input {
+  height: 55px;
+  width: 70%;
+
+  border: 1px solid transparent;
+}
+#pin_in {
+  color: blue;
+}
+#button_2 {
+  border: 1px solid red;
+}
