@@ -1,70 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      .link-container {
-        margin-bottom: 20px;
-        width: 300px;
-      }
+<html>
+	
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0" />
+		
+	<title>
+		How to Zoom an Image on
+		Mouse Hover using CSS?
+	</title>
+	
+	<style>
+		.geeks {
+			width: 400px;
+			height: 400px;
+			overflow: hidden;
+			margin: 0 auto;
+		}
+	
+		.geeks img {
+			width: 100%;
+			transition: 0.5s all ease-in-out;
+		}
+	
+		.geeks:hover img {
+			transform: scale(1.5);
+		}
+	</style>
+</head>
 
-      .link-container h2 {
-        background-color: #abd5ea;
-        color: #333;
-        font-size: 18px;
-        line-height: 30px;
-        margin: 0;
-        padding-left: 10px;
-      }
+<body>
+	<div class="geeks">
+		<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20200403151026/adblur_gfg.png"
+			alt="Geeks Image" />
+	</div>
+</body>
 
-      .link-container ul {
-        font-size: 13px;
-        list-style-type: none;
-        padding-left: 0;
-        margin: 0;
-        display: none;
-      }
-      [id^=btn]:checked +  ul
-      {
-          display: block;
-      }
-      
-
-      .link-container ul li {
-        background-image: url("http://i.msdn.microsoft.com/dynimg/IC688534.png");
-        background-repeat: no-repeat;
-        background-position: center left;
-        border-bottom: #777 1px solid;
-        padding-left: 20px;
-        line-height: 30px;
-      }
-
-      .link-container ul li a {
-        text-decoration: none;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="link-container">
-      <h2 for = "btn">Sales Reports</h2>
-      <ul id = "btn">
-        <li><a href="#">Sales By Customer</a></li>
-        <li><a href="#">Sales By Item</a></li>
-      </ul>
-       
-    </div>
-
-    <div class="link-container">
-      <h2 for="btn">Invoice Reports</h2>
-      <ul id = "btn" >
-        <li><a href="#">Invoice Aging</a></li>
-        <li><a href="#">Invoice Details</a></li>
-        <li><a href="#">Credit Note Details</a></li>
-      </ul>
-       
-    </div>
-  </body>
 </html>
