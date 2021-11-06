@@ -36,14 +36,11 @@
           border-radius: 5px;
           display: none;
       }
-      [id^=btn]:checked + ul
+       [id^=btn]:checked + ul
       {
           display: block;
       }
-      input
-      {
-          display: none;
-      }
+      
       nav .menu::before
       {
           position: absolute;
@@ -117,14 +114,22 @@
         >Drop Down
         <span class="fas fa-caret-down"></span>
       </label>
+
+
+
       <input type="checkbox" id="btn"/>
       <ul class="menu">
         <li><a href="#">Home</a></li>
         <li>
+
+
           <label for="btn-2" class="first">Features
               <span class="fas fa-caret-down"></span>
           </label>
           <input type="checkbox" id="btn-2"/>
+
+
+
           <ul>
             <li><a href="#">Page</a></li>
           </ul>

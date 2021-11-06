@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        
+      <title>ShowCase Of Product</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Poppins:wght@300;400;500;600;700&family=Roboto&display=swap');
+        *{
+            font-family: 'Balsamiq Sans', cursive;
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
+        }
+
+      #mainDiv {
+        border: 1px solid slateblue;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        margin-top: 40px;
+      }
+
+      #leftDiv {
+        height: 700px;
+        border: 1px solid red;
+        overflow: scroll;
+        margin-left: 20px;
+      }
+      #rightDiv {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        height: 700px;
+        border: 1px solid red;
+        overflow: scroll;
+        justify-content: center;
+        margin-left: 30px;
+      }
+      #rightDiv::-webkit-scrollbar,
+      #leftDiv::-webkit-scrollbar {
+        display: none;
+      }
+       #rightSubDiv > p
+       {
+           padding-right: 100px;
+       }
+      #rightSubDiv > img {
+        width: 220px;
+        height: 270px;
+        cursor: pointer;
+      }
+      #rightSubDiv > img
+      {
+        
+        transition: 0.5s all ease-in-out;
+      }
+       #rightSubDiv:hover img {
+            transform: scale(1.1);
+       }
+      .details
+      {
+        
+        padding-top: 20px;
+        cursor: pointer;
+      }
+      
+      .details ::marker
+      {
+          content: "";
+      }
+      .details[open] >summary>span
+      {
+          content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMVJREFUSEvtlNsNwjAMRU83gElgBJioIwAbsBGMAJPQDUAX5cNYeTgSlUCqvyI1vse5tjswcwwz67MAmg7/nEXPVHK4sPDFJLwAmkPxVYuOwBmYDDYHWAEjcMqVV2qyxA/ADdgbiAdI/AJsE0B5H1ECKPEKbBzEAqz4Hdi5175BtTHNQR6pvLWpvCjeAui7h8gKhazTuSoeAXiI9bcpHgXkICHxHoCF6JxtaM+YljZOPVHY3ahuZ+/Prrnq0T3oFiol/P8LXrIHKhlg12RKAAAAAElFTkSuQmCC");
+      }
+      .details >summary
+      {
+          
+          font-weight: bolder;
+          padding: 10px;
+      }
+      .details >summary > span
+      {
+          float: right;
+          content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAKZJREFUSEvtlMENwjAQBMcd0AmUkHRAR6EEOqGEUAJ0QgdE90NRZN8uOC/8tmbkvfUVOp/Smc9f0EzYiegCXIFXkw7yDAI+AQ9gzEjUFxyAO3DMSlRBpCJJHIEkcQVpSU3wzrTk487m4H8peALDulnfRjQDJ2ATHq9zBdGkJtwVpOGOQII7gjNwq2W+bp4zg5DEuuiy7MSv4bcoLXIiSsOdIUvwXQQLDaAoGREMQ18AAAAASUVORK5CYII=");
+                
+      }
+      .ulClass > li
+      {
+         padding: 5px;
+         color: rgb(78, 78, 184);
+      }
+      #button
+      {
+          
+        
+        height: 40px;
+        width: 40px;
+       
+        opacity: 0.5;
+        border-radius: 50%;
+        transform: translate(-120%,-600%);
+        
+          
+          
+      }
+      #button 
+      {
+            color: cornflowerblue;
+      }
+
+      .details+hr
+      {
+          width: 95%;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1>Dyanamic Headding 7899</h1>
+    <div id="mainDiv">
+      <div id="leftDiv">
+        <details class="details">
+           <summary>Gender<span></span></summary>
+           <ul  class="ulClass">
+               <li>Men</li>
+               <li>Woman</li>
+               <li>Unisex</li>
+           </ul>
+        </details>
+        <hr/>
+        <details class="details">
+           <summary>Category<span> </i></span></summary>
+           <ul class="ulClass">
+               <li>T-Shirt</li>
+               <li>Jacket</li>
+                
+           </ul>
+        </details>
+         <hr>
+        <details class="details">
+           <summary>Colore<span> </i></span></summary>
+           <ul class="ulClass">
+               <li>Red</li>
+               <li>Blue</li>
+               
+           </ul>
+        </details>
+         <hr>
+        <details class="details">
+           <summary>Design<span> </i></span></summary>
+           <ul class="ulClass">
+               <li>Printed</li>
+               <li>Plain</li>
+               <li>Unisex</li>
+           </ul>
+           
+        </details>
+         <hr>
+        <details class="details">
+           <summary>Sort By<span> </i></span></summary>
+           <ul class="ulClass">
+               <li>Popular</li>
+               <li>New</li>
+               <li>Price: High To Low</li>
+               <li>Price: Low To High</li>
+           </ul>
+        </details>
+         <hr>
+      </div>
+      <div id="rightDiv"></div>
+    </div>
+  </body>
+</html>
+<script>
+  var rightDiv = document.getElementById("rightDiv");
+  console.log("here");
+  var dataOfProduct = [
+    {
+      imgUrl:
+        "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
+      name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
+      price: 499,
+    },
+    {
+      imgUrl:
+        "https://images.bewakoof.com/t320/pocket-joint-sun-active-t-shirt-men-s-printed-t-shirts-262558-1579955492.gif",
+      name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
+      price: 499,
+    },
+    {
+      imgUrl:
+        "https://images.bewakoof.com/t320/world-peace-full-sleeve-t-shirt-men-s-printed-full-sleeve-t-shirt-231490-1631886128.jpg",
+      name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
+      price: 499,
+    },
+    {
+      imgUrl:
+        "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
+      name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
+      price: 499,
+    },
+    {
+      imgUrl:
+        "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
+      name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
+      price: 499,
+    },
+    {
+      imgUrl:
+        "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
+      name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
+      price: 499,
+    },
+    {
+      imgUrl:
+        "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
+      name: "Iron Face Half Sleeve T-Shirt <br>(AVL) Black",
+      price: 499,
+    },
+    {
+      imgUrl:
+        "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
+      name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
+      price: 499,
+    },
+  ];
+
+  dataOfProduct.map(function (item) {
+    var div = document.createElement("div");
+    div.setAttribute("id", "rightSubDiv");
+
+    var img = document.createElement("img");
+    img.setAttribute("src", item.imgUrl);
+    img.setAttribute("id","img");
+
+    var button = document.createElement("button");
+    button.setAttribute("id","button")
+    button.innerHTML = "Fav";
+
+    var p = document.createElement("p");
+    p.textContent = item.name;
+
+    var pPrice = document.createElement("p");
+    pPrice.textContent = `MRP ${item.price}`;
+    div.append(img, button, p, pPrice);
+    rightDiv.append(div);
+  });
+</script>

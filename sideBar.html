@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        #details  
+
+        {
+            
+            width: 620px;
+            background-color: lawngreen;
+            padding: 2px 6px;
+            font: 16px "Open Sans", Calibri, sans-serif;
+   
+        }
+        #details  > summary >span
+        {
+            
+                float: right;
+            
+            
+        }
+        #details[open] > summary >span
+        {
+            
+                float: right;
+                content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAPtJREFUSEvtleERATEUhD8V0AEdoAJUgA50gApQAUpQASpABeiADujArImZm7vIS8bcP/l3l3277+1tchVKXpWS+fkLmA5nLboATbMiDiCutqBlCVyBVl5AL85xDZooda8pCimaAzOzPAxYAOJ5L19Mf/kWJ6Cb1fcJNNx41cRJns73myWg/QmwTBSYAqt8TegkH4FOpMgeGPiwIYEaoHEtq2SNbH2kCgivrrbGFENg9w0Tc9mpuP+FYAOMQg3ECMgqRbeeI7q71HitCZ0DX0PK9iG30QMUhOCKmeBDoAiO3cPaRdniT/rhyKpPx++LLGalTBDDV8D8BUzbXs+cIBmzAPLtAAAAAElFTkSuQmCC");
+            
+            
+        }
+        
+        #details > summary::marker
+        {
+            
+            content: "";
+        }
+        #details > li
+        {
+           background-color: lawngreen;
+           list-style: none;
+            font: 16px "Open Sans", Calibri, sans-serif;
+            
+        }
+        #n > li
+        {
+            list-style: none;
+            
+            padding: 10px;
+        }
+        #n > li:hover
+        {
+                background-color: lawngreen;
+                opacity: 1;
+                 
+        }
+    </style>
+  </head>
+  <body>
+    <details id="details">
+      <summary>Tid<span><i class='bx bxs-right-arrow'></i></span></summary>
+      <div id = "n">
+        <li>1</li>
+        <li>2</li>
+        <li>5</li>
+        <li>2</li>
+      </div>
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANVJREFUSEu1lV0NAkEMhL9zBFJwAA6QAA5AAg7AweEAHIADUACZZJvwk+N2SztP9zRf59ptO5LVJfszBDgBD2AB6NutIYDMTStg7SXUAOStFDPg0gqqBcj3BijNtgXSAjDfvqQRcFQegKXRAOzHCF6A+Qog0GCafwECqfGC6Nd9KQJgppsyzm9pIgE2ztPXGNGAMzDJAuh9LD+bEJHgCsyzmrwrVYeP6b1UnfLQDsU8fFWoai07zXu1apt8LFWnrGsdG1Xu0q+TKUONX8rJdFXbsuzCAE/j5jYZKYpDjQAAAABJRU5ErkJggg=="/>
+    </details>
+  </body>
+</html>
