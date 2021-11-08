@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ShowCase Of Product</title>
+      <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        
+      <title>ShowCase Of Product</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Poppins:wght@300;400;500;600;700&family=Roboto&display=swap');
+        *{
+            font-family: 'Balsamiq Sans', cursive;
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
+        }
+
       #mainDiv {
         border: 1px solid slateblue;
         display: grid;
         grid-template-columns: 20% 80%;
         margin-top: 40px;
-        
       }
 
       #leftDiv {
@@ -16,7 +24,6 @@
         border: 1px solid red;
         overflow: scroll;
         margin-left: 20px;
-         
       }
       #rightDiv {
         display: grid;
@@ -26,74 +33,137 @@
         overflow: scroll;
         justify-content: center;
         margin-left: 30px;
-         
       }
       #rightDiv::-webkit-scrollbar,
       #leftDiv::-webkit-scrollbar {
-        display: none;  
+        display: none;
       }
+       #rightSubDiv > p
+       {
+           padding-right: 100px;
+       }
       #rightSubDiv > img {
-        width: 220px;
-        height: 270px;
+        width: 250px;
+        height: 300px;
         cursor: pointer;
       }
-      #rightSubDiv > p {
-        padding: 0px 150px 0px 0px;
+      #rightSubDiv > img
+      {
+        
+        transition: 0.5s all ease-in-out;
+      }
+       #rightSubDiv:hover img {
+            transform: scale(1.1);
+       }
+      .details
+      {
+        
+        padding-top: 20px;
         cursor: pointer;
       }
-      #leftDiv > h1,
-      #leftDiv > h2 {
-        background-color: rgb(77, 128, 128);
-        color: white;
-        border-radius: 3px;
-        padding-left: 5px;
+      
+      .details ::marker
+      {
+          content: "";
       }
-      #leftDiv > ul {
-        list-style: none;
-        cursor: pointer;
-        color: rgb(41, 233, 223);
+      .details[open] >summary>span
+      {
+          content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMVJREFUSEvtlNsNwjAMRU83gElgBJioIwAbsBGMAJPQDUAX5cNYeTgSlUCqvyI1vse5tjswcwwz67MAmg7/nEXPVHK4sPDFJLwAmkPxVYuOwBmYDDYHWAEjcMqVV2qyxA/ADdgbiAdI/AJsE0B5H1ECKPEKbBzEAqz4Hdi5175BtTHNQR6pvLWpvCjeAui7h8gKhazTuSoeAXiI9bcpHgXkICHxHoCF6JxtaM+YljZOPVHY3ahuZ+/Prrnq0T3oFiol/P8LXrIHKhlg12RKAAAAAElFTkSuQmCC");
       }
+      .details >summary
+      {
+          
+          font-weight: bolder;
+          padding: 10px;
+      }
+      .details >summary > span
+      {
+          float: right;
+          content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAKZJREFUSEvtlMENwjAQBMcd0AmUkHRAR6EEOqGEUAJ0QgdE90NRZN8uOC/8tmbkvfUVOp/Smc9f0EzYiegCXIFXkw7yDAI+AQ9gzEjUFxyAO3DMSlRBpCJJHIEkcQVpSU3wzrTk487m4H8peALDulnfRjQDJ2ATHq9zBdGkJtwVpOGOQII7gjNwq2W+bp4zg5DEuuiy7MSv4bcoLXIiSsOdIUvwXQQLDaAoGREMQ18AAAAASUVORK5CYII=");
+                
+      }
+      .ulClass > li
+      {
+         padding: 5px;
+         color: rgb(78, 78, 184);
+      }
+      #button
+      {
+          
+        
+        height: 40px;
+        width: 40px;
+       
+        opacity: 0.5;
+        border-radius: 50%;
+        transform: translate(-120%,-670%);
+        
+          
+          
+      }
+      #button 
+      {
+            color: cornflowerblue;
+      }
+
+      .details+hr
+      {
+          width: 95%;
+      }
+      
     </style>
   </head>
   <body>
-    <h1>Dyanamic Headding</h1>
+    <h1>Dyanamic Headding 7899</h1>
     <div id="mainDiv">
       <div id="leftDiv">
-        <h1>Filter</h1>
-        <h2>Gender</h2>
-        <ul>
-          <li>Woman</li>
-          <li>Men</li>
-          <li>Unisex</li>
-        </ul>
-        <h2>Category</h2>
-        <ul>
-          <li>T-Shirt</li>
-          <li>Jacket</li>
-        </ul>
-        <h2>Size</h2>
-        <ul>
-          <li>S</li>
-          <li>M</li>
-          <li>L</li>
-        </ul>
-        <h2>Colore</h2>
-        <ul>
-          <li>Red</li>
-          <li>Blue</li>
-        </ul>
-        <h2>Brand</h2>
-        <ul>
-          <li>BewaKoof</li>
-          <li>Deyann</li>
-        </ul>
-        <h2>Sort By</h2>
-        <ul>
-          <li>Popular</li>
-          <li>New</li>
-          <li>High to Low</li>
-          <li>Low to High</li>
-        </ul>
+        <details class="details">
+           <summary>Gender<span></span></summary>
+           <ul  class="ulClass">
+               <li id="Men">Men</li>
+               <li id="Woman">Woman</li>
+                
+           </ul>
+        </details>
+        <hr/>
+        <details class="details">
+           <summary>Category<span> </i></span></summary>
+           <ul class="ulClass">
+               <li id="Shirt">Shirt</li>
+               <li id="Jacket">Jacket</li>
+                
+           </ul>
+        </details>
+         <hr>
+        <details class="details">
+           <summary>Colore<span> </i></span></summary>
+           <ul class="ulClass">
+               <li id="Red">Red</li>
+               <li id="Blue">Blue</li>
+               
+           </ul>
+        </details>
+         <hr>
+        <details class="details">
+           <summary>Design<span> </i></span></summary>
+           <ul class="ulClass">
+               <li id="Printed">Printed</li>
+               <li id="Plain">Plain</li>
+                
+           </ul>
+           
+        </details>
+         <hr>
+        <details class="details">
+           <summary>Sort By<span> </i></span></summary>
+           <ul class="ulClass">
+               
+               <li id="New">Name</li>
+               <li id="Low1" value="Low12">Price: Low To High</li>
+               <li id="High">Price: High To Low</li>
+           </ul>
+        </details>
+         <hr>
       </div>
       <div id="rightDiv"></div>
     </div>
@@ -102,7 +172,7 @@
 <script>
   var rightDiv = document.getElementById("rightDiv");
   console.log("here");
-  var dataOfProduct = [
+    var dataOfProduct = [
     {
       imgUrl:
         "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
@@ -113,64 +183,242 @@
       imgUrl:
         "https://images.bewakoof.com/t320/pocket-joint-sun-active-t-shirt-men-s-printed-t-shirts-262558-1579955492.gif",
       name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
-      price: 499,
+      price: 599,
     },
     {
       imgUrl:
         "https://images.bewakoof.com/t320/world-peace-full-sleeve-t-shirt-men-s-printed-full-sleeve-t-shirt-231490-1631886128.jpg",
       name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
-      price: 499,
+      price: 699,
     },
     {
       imgUrl:
         "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
       name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
-      price: 499,
+      price: 799,
     },
     {
       imgUrl:
         "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
       name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
-      price: 499,
+      price: 899,
     },
     {
       imgUrl:
         "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
       name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
-      price: 499,
+      price: 999,
     },
     {
       imgUrl:
         "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
       name: "Iron Face Half Sleeve T-Shirt <br>(AVL) Black",
-      price: 499,
+      price: 1099,
     },
     {
       imgUrl:
         "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
       name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
-      price: 499,
+      price: 2099,
     },
   ];
 
-  dataOfProduct.map(function (item) {
+    var menTshirt= [{
+      imgUrl:"https://images.bewakoof.com/t320/hashtag-blue-half-sleeve-t-shirt-348476-1635869338-1.jpg",
+      name:"Hashteg blue Half T-shirt",
+      price: 299,
+
+  },
+  {
+      imgUrl:"https://images.bewakoof.com/t320/batman-outline-logo-full-sleeve-t-shirt-bml-black-men-s-printed-full-sleeve-t-shirt-283891-1631798625.jpg"
+        ,name:"Batman Outline Logo",
+        price:399,
+    },
+  {
+      imgUrl:"https://images.bewakoof.com/t320/navy-blue-half-sleeve-t-shirt-men-s-plain-t-shirts-115-1630523876-1.jpg"
+        ,name:"Navy Blue T-shirt",
+        price:349,
+    },
+  {
+        imgUrl:"https://images.bewakoof.com/t320/off-road-jeep-full-sleeve-t-shirt-black-men-s-printed-full-sleeve-t-shirt-343097-1615881837.jpg"
+         ,name:"Off Road Jeep ",
+        price:399,
+    },
+  {
+        imgUrl:"https://images.bewakoof.com/t320/gyaan-half-sleeve-t-shirt-black-men-s-printed-t-shirts-310957-1631814129.jpg"
+         ,name:"Gyann Half Seleev T-Shirt",
+        price:399,
+    },
+  {
+        imgUrl:"https://images.bewakoof.com/t320/funk-peace-half-sleeve-t-shirt-white-344116-1635869049-1.jpg"
+         ,name:"Funk Peace Half Sleeve T-Shirt",
+        price:399,
+    },
+  {
+        imgUrl:"https://images.bewakoof.com/t320/hell-no-monday-half-sleeve-t-shirt-black-343960-1635869845-1.jpg"
+         ,name:"Beach Half Sleeve T-Shirt",
+        price:699,
+    }
+
+
+]
+
+    var woman = [
+    {
+        imgUrl:"https://images.bewakoof.com/t320/the-squids-438586-1635769552-1.jpg",
+        name:"The Squids BoyFirend T-Shirt",
+        price: 399,
+
+},
+{
+          imgUrl:"https://images.bewakoof.com/t320/cold-eyes-women-s-boyfriend-t-shirt-387437-1634624696-1.jpg",
+        name:"Cold Eyes Boyfirend T-Shirt",
+        price: 399,
+},
+{
+          imgUrl:"https://images.bewakoof.com/t320/mikasa-half-sleeve-t-shirt-387434-1636036134-1.gif",
+        name:"Lost Mountains Boyfirend T-Shirts",
+        price: 399 ,
+},
+{
+          imgUrl:"https://images.bewakoof.com/t320/cold-hearted-women-s-boyfriend-t-shirt-387436-1634624643-1.jpg",
+        name:"Mikasa Half Sleeve T-Shirt",
+        price: 329,
+},
+{
+          imgUrl:"https://images.bewakoof.com/t320/call-me-sensei-women-s-boyfriend-t-shirt-387438-1634624605-1.jpg",
+        name:"Call Me Sensei T-Shirt",
+        price: 399,
+},
+{
+      imgUrl:"https://images.bewakoof.com/t320/moody-boyfriend-t-shirts-meteor-grey-women-s-printed-boyfriend-t-shirts-329370-1612527995.jpg",
+        name:"Moody Boyfirend T-Shirrt",
+        price: 349,
+
+},
+{
+              imgUrl:"https://images.bewakoof.com/t320/click-click-bugs-boyfriend-t-shirt-ltl-black-women-s-printed-boyfriend-t-shirts-310831-1609214130.jpg",
+        name:"click click Bugs Boyfirend T-Shirt",
+        price: 349,
+}
+]
+
+    var Shirt = [
+        {
+            imgUrl:"https://images.bewakoof.com/t320/men-s-printed-ethnic-shirt-318230-1635870279-1.jpg",
+            name:"Men's Printed Ethnic Shirt",
+            price: 799,
+
+    },
+    {
+         imgUrl:"https://images.bewakoof.com/t320/aop-mandarin-collar-full-sleeve-shirt-364799-1635237923-1.jpg",
+            name:"AOP Mandarin Collar Shirt",
+            price: 749,
+    },
+    {
+         imgUrl:"https://images.bewakoof.com/t320/mustard-plus-size-solid-shirt-james-360390-1635236739-1.jpg",
+            name:"Mustard Plus Size Solid Yellow",
+            price: 899,
+    },
+    {
+             imgUrl:"https://images.bewakoof.com/t320/men-s-half-sleeves-printed-shirt-369084-1635869800-1.jpg",
+            name:"Men's Half Sleeves Printed Shirt",
+            price: 968,
+    },
+    {
+             imgUrl:"https://images.bewakoof.com/t320/men-s-half-sleeves-printed-shirt-361286-1635869185-1.jpg",
+            name:"Men's Half Sleeves Printed Shirt",
+            price: 555,
+    },
+    {
+             imgUrl:"https://images.bewakoof.com/t320/khadio-full-sleeves-cotton-casual-chinese-neck-shirt-394534-1630914164-1.jpg",
+            name:"Full Sleeves Cotton Casual Black",
+            price: 588,
+    },
+    {
+             imgUrl:"https://images.bewakoof.com/t320/deyann-solid-kurta-in-red-kurta-424006-1633677985.jpg",
+            name:"Solid Kurta In Red",
+            price: 1004,
+    }
+]
+     
+  var dataArray =[];
+    display(dataOfProduct);
+
+    
+     
+    //get The Men
+   document.querySelector("#Men").addEventListener("click",function(){
+            console.log("Men")
+            display(menTshirt);
+    });
+
+    //get The Women
+    document.getElementById("Woman").addEventListener("click",function(){
+        console.log("women");
+        display(woman);
+        sortByPrice(woman)
+
+         
+    })
+
+    sortByPrice(dataOfProduct);
+  function display(dataOfProduct)
+  {
+    rightDiv.textContent = "";
+    dataOfProduct.map(function (item) {
+        
+  
     var div = document.createElement("div");
     div.setAttribute("id", "rightSubDiv");
 
     var img = document.createElement("img");
     img.setAttribute("src", item.imgUrl);
+    img.setAttribute("id","img");
 
     var button = document.createElement("button");
-    
-    button.textContent="button"
-
+    button.setAttribute("id","button")
+    button.innerHTML = "Fav";
 
     var p = document.createElement("p");
     p.textContent = item.name;
-
+   
     var pPrice = document.createElement("p");
     pPrice.textContent = `MRP ${item.price}`;
-    div.append(img,button, p, pPrice);
+    div.append(img, button, p, pPrice);
     rightDiv.append(div);
   });
+ }
+  
+ function sortByPrice(data)
+ {
+      
+       document.getElementById("New").addEventListener("click",function(){
+             data = data.sort(function(a,b){
+                 return a.name > b.name ? 1 : b.name > a.name ? -1 : 0;
+             })
+             display(data)
+      });
+       document.getElementById("Low1").addEventListener("click",function(){
+            console.log("Low1");
+             data = data.sort(function(a,b){
+                return a.price-b.price
+       }); 
+       display(data)
+      });
+     
+        document.getElementById("High").addEventListener("click",function(){
+            console.log("Low1");
+             data = data.sort(function(a,b){
+                return b.price-a.price
+       }); 
+       display(data)
+      });
+      //document.getElementById("New");
+      //document.getElementById("Low");
+      document.getElementById("High");
+      console.log("item");
+ }
+ dataArray.push(dataOfProduct)
+    localStorage.setItem("porductlist",JSON.stringify(dataArray));
 </script>
