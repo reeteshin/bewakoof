@@ -110,13 +110,36 @@
       {
           width: 95%;
       }
+      #cutpricePteg
+      {
+        background-color: silver;
+         width: 50%;
+         
+        
+
+      }
+      #filterAndClear >span
+      {
+          float: right;
+          padding-right: 5px;
+      }
+      #filterAndClear >span >button
+      {
+          background-color: rgb(255, 255, 255);
+          border: wheat;
+          color: teal;
+          font-weight: bolder;
+          cursor: pointer;
+      }
       
     </style>
   </head>
   <body>
     <h1>Dyanamic Headding 7899</h1>
+
     <div id="mainDiv">
       <div id="leftDiv">
+        <h4 id ="filterAndClear">Filter<span><button id="filterButton">Clear All</button></span></h4>
         <details class="details">
            <summary>Gender<span></span></summary>
            <ul  class="ulClass">
@@ -178,48 +201,56 @@
         "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
       name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
       price: 499,
+      cutprice: 459,
     },
     {
       imgUrl:
         "https://images.bewakoof.com/t320/pocket-joint-sun-active-t-shirt-men-s-printed-t-shirts-262558-1579955492.gif",
       name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
       price: 599,
+      cutprice:549,
     },
     {
       imgUrl:
         "https://images.bewakoof.com/t320/world-peace-full-sleeve-t-shirt-men-s-printed-full-sleeve-t-shirt-231490-1631886128.jpg",
       name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
       price: 699,
+      cutprice:659,
     },
     {
       imgUrl:
         "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
       name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
       price: 799,
+      cutprice:759,
     },
     {
       imgUrl:
         "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
       name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
       price: 899,
+      cutprice:850,
     },
     {
       imgUrl:
         "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
       name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
       price: 999,
+      cutprice:950,
     },
     {
       imgUrl:
         "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
       name: "Iron Face Half Sleeve T-Shirt <br>(AVL) Black",
       price: 1099,
+      cutprice:1050,
     },
     {
       imgUrl:
         "https://images.bewakoof.com/t320/iron-face-half-sleeve-t-shirt-avl-black-men-s-printed-t-shirts-374205-1624870301.jpg",
       name: "Iron Face Half Sleeve T-Shirt (AVL) Black",
       price: 2099,
+      cutprice:2050,
     },
   ];
 
@@ -268,12 +299,14 @@
         imgUrl:"https://images.bewakoof.com/t320/the-squids-438586-1635769552-1.jpg",
         name:"The Squids BoyFirend T-Shirt",
         price: 399,
+        cutprice: 350,
 
 },
 {
           imgUrl:"https://images.bewakoof.com/t320/cold-eyes-women-s-boyfriend-t-shirt-387437-1634624696-1.jpg",
         name:"Cold Eyes Boyfirend T-Shirt",
         price: 399,
+        cutprice: 350,
 },
 {
           imgUrl:"https://images.bewakoof.com/t320/mikasa-half-sleeve-t-shirt-387434-1636036134-1.gif",
@@ -284,22 +317,26 @@
           imgUrl:"https://images.bewakoof.com/t320/cold-hearted-women-s-boyfriend-t-shirt-387436-1634624643-1.jpg",
         name:"Mikasa Half Sleeve T-Shirt",
         price: 329,
+        cutprice: 280,
 },
 {
           imgUrl:"https://images.bewakoof.com/t320/call-me-sensei-women-s-boyfriend-t-shirt-387438-1634624605-1.jpg",
         name:"Call Me Sensei T-Shirt",
         price: 399,
+        cutprice: 350,
 },
 {
       imgUrl:"https://images.bewakoof.com/t320/moody-boyfriend-t-shirts-meteor-grey-women-s-printed-boyfriend-t-shirts-329370-1612527995.jpg",
         name:"Moody Boyfirend T-Shirrt",
         price: 349,
+        cutprice: 299,
 
 },
 {
               imgUrl:"https://images.bewakoof.com/t320/click-click-bugs-boyfriend-t-shirt-ltl-black-women-s-printed-boyfriend-t-shirts-310831-1609214130.jpg",
         name:"click click Bugs Boyfirend T-Shirt",
         price: 349,
+        cutprice: 299,
 }
 ]
 
@@ -308,49 +345,284 @@
             imgUrl:"https://images.bewakoof.com/t320/men-s-printed-ethnic-shirt-318230-1635870279-1.jpg",
             name:"Men's Printed Ethnic Shirt",
             price: 799,
+            cutprice: 750,
 
     },
     {
          imgUrl:"https://images.bewakoof.com/t320/aop-mandarin-collar-full-sleeve-shirt-364799-1635237923-1.jpg",
             name:"AOP Mandarin Collar Shirt",
             price: 749,
+            cutprice: 699,
     },
     {
          imgUrl:"https://images.bewakoof.com/t320/mustard-plus-size-solid-shirt-james-360390-1635236739-1.jpg",
             name:"Mustard Plus Size Solid Yellow",
             price: 899,
+            cutprice: 850,
     },
     {
              imgUrl:"https://images.bewakoof.com/t320/men-s-half-sleeves-printed-shirt-369084-1635869800-1.jpg",
             name:"Men's Half Sleeves Printed Shirt",
             price: 968,
+            cutprice: 899,
     },
     {
              imgUrl:"https://images.bewakoof.com/t320/men-s-half-sleeves-printed-shirt-361286-1635869185-1.jpg",
             name:"Men's Half Sleeves Printed Shirt",
             price: 555,
+            cutprice: 499,
     },
     {
              imgUrl:"https://images.bewakoof.com/t320/khadio-full-sleeves-cotton-casual-chinese-neck-shirt-394534-1630914164-1.jpg",
             name:"Full Sleeves Cotton Casual Black",
             price: 588,
+            cutprice: 410,
     },
     {
              imgUrl:"https://images.bewakoof.com/t320/deyann-solid-kurta-in-red-kurta-424006-1633677985.jpg",
             name:"Solid Kurta In Red",
             price: 1004,
+            cutprice: 850,
     }
 ]
      
+    var Jacket = [
+      {
+        imgUrl:"https://images.bewakoof.com/t320/black-sleeveless-puffer-jacket-aw-21-men-s-mpjaw46-sleeveless-puffer-jacket-aw-21-plain-364929-1633095056.jpg",
+        name:"Black Sleeveless Puffer jacket",
+        price: 1199,
+        cutprice: 1050,
+      },
+       {
+        imgUrl:"https://images.bewakoof.com/t320/blue-sleeveless-puffer-jacket-aw-21-men-s-mpjaw46-sleeveless-puffer-jacket-aw-21-plain-364930-1633095104.jpg",
+        name:"ROyal Blue Sleeveless Puffer Jacket",
+        price: 1699,
+        cutprice: 1650,
+      },
+       {
+        imgUrl:"https://images.bewakoof.com/t320/red-pear-varsity-bomber-jacket-287640-1635869321-1.jpg",
+        name:"Red Pear Varity Bomber Jacket",
+        price:799,
+        cutprice: 750,
+      },
+       {
+        imgUrl:"https://images.bewakoof.com/t320/blue-colorblock-windcheater-jacket-men-s-mwcjaw35-windcheater-jackets-aw-21-plain-367107-1632228756.jpg",
+        name:"Blue ColoreBolock Jacket",
+        price: 1599,
+        cutprice: 1550,
+      },
+       {
+        imgUrl:"https://images.bewakoof.com/t320/white-windcheater-aw-21-men-s-mpjaw29-windcheater-aw-21-plain-364948-1633095473.jpg",
+        name:"White Windcheater AW 21",
+        price: 599 ,
+        cutprice: 550,
+      },
+       {
+        imgUrl:"https://images.bewakoof.com/t320/neon-windcheater-aw-21-men-s-mpjaw29-windcheater-aw-21-plain-364949-1633095526.jpg",
+        name:"Zero Gravity Neon Windcheater",
+        price: 1299,
+        cutprice: 1250,
+      },
+       {
+        imgUrl:"https://images.bewakoof.com/t320/black-windcheater-aw-21-men-s-mpjaw28-windcheater-aw-21-plain-364947-1633095423.jpg",
+        name:"Black windcheater AW 21",
+        price: 1499,
+        cutprice: 1450,
+      },
+    ]
+
+    var red = [
+      {
+        imgUrl:"https://images.bewakoof.com/t320/freedom-feather-full-sleeve-t-shirt-bold-red-men-s-printed-full-sleeve-t-shirt-340014-1614941334.jpg",
+        name: "RED Freedom Feather Full Sleeve T-Shirt",
+        price: 399,
+        cutprice: 369,
+      },
+       {
+        imgUrl:"https://images.bewakoof.com/t320/bold-red-full-sleeve-t-shirt-men-s-plain-full-sleeve-t-shirts-183125-1586260234.jpg",
+        name: "Blod Red Full Sleeve",
+        price: 349,
+        cutprice: 279,
+      },
+       {
+        imgUrl:"https://images.bewakoof.com/t320/busy-doin-nothing-full-sleeve-t-shirt-dl-bold-red-men-s-printed-full-sleeve-t-shirt-277530-1632287591.jpg",
+        name: "Busy Doin Nothing Full Sleeve",
+        price: 449,
+        cutprice: 409,
+      },
+       {
+        imgUrl:"https://images.bewakoof.com/t320/funk-peace-full-sleeve-t-shirt-bold-red-344115-1635870152-1.jpg",
+        name: "FUnk Peace Full Sleeve T-Shirt",
+        price: 399,
+        cutprice: 359,
+      },
+       {
+        imgUrl:"https://images.bewakoof.com/t320/naasto-full-sleeve-t-shirt-296684-1635868806-1.jpg",
+        name: "Naasto Full Sleeve T-Shirt",
+        price: 279,
+        cutprice: 249,
+      },
+       {
+        imgUrl:"https://images.bewakoof.com/t320/late-full-sleeve-t-shirt-258864-1635869739-1.jpg",
+        name: "Late Full Sleeve T-Shirt",
+        price: 299,
+        cutprice: 269,
+      },
+       {
+        imgUrl:"https://images.bewakoof.com/t320/be-a-human-full-sleeve-t-shirt-343596-1635869193-1.jpg",
+        name: "Be A Human Full Sleeve T-Shirt",
+        price: 349,
+        cutprice: 289,
+      },
+    ]
+
+    var Blue = [
+      {
+        imgUrl:"https://images.bewakoof.com/t320/blue-vibes-full-sleeve-t-shirt-navy-blue-men-s-printed-full-sleeve-t-shirt-298519-1631810731.jpg",
+        name:"Blue Vibes Full Sleeve T-SHirt",
+        price:399,
+        cutprice:349,
+      },
+      {
+        imgUrl:"https://images.bewakoof.com/t320/tropical-blue-full-sleeve-t-shirt-271436-1635869434-1.jpg",
+        name:"TroPical BLue Full Sleeve T-Shirt",
+        price:399,
+        cutprice:319,
+      },
+      {
+        imgUrl:"https://images.bewakoof.com/t320/dillinger-navy-solid-plain-t-shirt-t-shirt-368612-1623749463.jpg",
+        name:"Navy Solid Plain Half Sleeves T-SHirt",
+        price:539,
+        cutprice:499,
+      },
+      {
+        imgUrl:"https://images.bewakoof.com/t320/blue-solid-full-sleeves-t-shirt-368652-1635868914-1.jpg",
+        name:"Bule Solid Full Sleeves T-Shirt",
+        price:499,
+        cutprice:469,
+      },
+      {
+        imgUrl:"https://images.bewakoof.com/t320/men-s-plain-raglan-henley-full-sleeves-t-shirt-dazzling-blue-peageant-blue-men-s-plain-raglan-henley-full-sleeves-t-shirt-333625-1619166805.jpg",
+        name:"Dazzling Blue - Pageant",
+        price:329,
+        cutprice:299,
+      },
+      {
+        imgUrl:"https://images.bewakoof.com/t320/definitely-not-7-full-sleeve-t-shirt-tropical-blue-336252-1635869694-1.jpg",
+        name:"Definitely Not 7 Full Sleeve T-Shirt",
+        price:399,
+        cutprice:359,
+      },
+      {
+        imgUrl:"https://images.bewakoof.com/t320/dillinger-blue-graphic-print-t-shirt-424738-1633552047-1.jpg",
+        name:"Blue Graphic Print T-Shirt",
+        price:544,
+        cutprice:509,
+      },
+    ]
+
+    var printed = [
+      {
+        imgUrl:"https://images.bewakoof.com/t320/the-squids-full-sleeve-t-shirts-438590-1635769272-1.jpg",
+        name:"The Squids Full Sleeve T-Shirt",
+        price:499,
+        cutprice:399,
+      },
+      {
+        imgUrl:"https://images.bewakoof.com/t320/squid-front-man-full-sleeve-t-shirt-438494-1635769472-1.jpg",
+        name:"Squid Game Front Man Full Sleeve T-Shirt",
+        price:499,
+        cutprice:399,
+      },
+      {
+        imgUrl:"https://images.bewakoof.com/t320/difference-of-opinion-brown-graphic-print-t-shirt-428144-1633703226-1.jpg",
+        name:"Brown Graphic Print T Shirt",
+        price:549,
+        cutprice:509,
+      },
+      {
+        imgUrl:"https://images.bewakoof.com/t320/dillinger-blue-graphic-print-t-shirt-424738-1633552047-1.jpg",
+        name:"Blue Graphic Print T Shirt",
+        price:544,
+        cutprice:509,
+      },
+      {
+        imgUrl:"https://images.bewakoof.com/t320/not-for-fashion-mickey-full-sleeve-t-shirt-dl-413711-1633004933-1.jpg",
+        name:"Not For Fashion Mickey Full Sleeve",
+        price:449,
+        cutprice:409,
+      },
+      {
+        imgUrl:"https://images.bewakoof.com/t320/difference-of-opinion-blue-graphic-print-t-shirt-428152-1633706828-1.jpg",
+        name:"Blue Graphic Print T Shirt",
+        price:549,
+        cutprice:509,
+      },
+      {
+        imgUrl:"https://images.bewakoof.com/t320/dillinger-pink-graphic-print-t-shirt-424926-1633551045-1.jpg",
+        name:"Pink Graphic Print T Shirt",
+        price:549,
+        cutprice:509,
+      },
+    ]
+
+    var plain = [
+      {
+        imgUrl:"https://images.bewakoof.com/t320/bold-red-full-sleeve-t-shirt-men-s-plain-full-sleeve-t-shirts-183125-1586260234.jpg",
+        name:"Bold Red Full Sleeve T-Shirt",
+        price:349,
+        cutprice:279,
+      },
+      {
+        imgUrl:"https://images.bewakoof.com/t320/meteor-grey-full-sleeve-t-shirt-211959-1635868028-1.jpg",
+        name:"Meteor Grey Full Sleeve T-Shirt",
+        price:349,
+        cutprice:279,
+      },
+      {
+        imgUrl:"https://images.bewakoof.com/t320/men-s-full-sleeve-melange-cut-sew-t-shirt-278850-1635869479-1.jpg",
+        name:"Men`s Full Sleeve Melange Cut",
+        price:349,
+        cutprice:289,
+      },
+      {
+        imgUrl:"https://images.bewakoof.com/t320/anthra-melange-raw-edge-full-sleeve-t-shirt-351511-1635870643-1.jpg",
+        name:"Anthra Melange Raw Edge T-Shirt",
+        price:499,
+        cutprice:449,
+      },
+      {
+        imgUrl:"https://images.bewakoof.com/t320/white-full-sleeve-t-shirt-1093-1635864873-1.jpg",
+        name:"White Full Sleeve T-Shirt",
+        price:399,
+        cutprice:319,
+      },
+      {
+        imgUrl:"https://images.bewakoof.com/t320/men-s-plain-raglan-henley-full-sleeves-t-shirt-dazzling-blue-peageant-blue-men-s-plain-raglan-henley-full-sleeves-t-shirt-333625-1619166805.jpg",
+        name:"Dazzling Blue - Pageant Blue T-Shirt",
+        price:329,
+        cutprice:299,
+      },
+      {
+        imgUrl:"https://images.bewakoof.com/t320/yolo-yellow-full-sleeve-t-shirt-330818-1635869194-1.jpg",
+        name:"Yolo Yellow Full Sleeve T-Shirt",
+        price:299,
+        cutprice:249,
+      },
+    ]
   var dataArray =[];
     display(dataOfProduct);
 
     
-     
+     document.getElementById("filterButton").addEventListener("click",function(){
+       console.log("clear");
+       window.location.reload();
+     })
     //get The Men
    document.querySelector("#Men").addEventListener("click",function(){
             console.log("Men")
             display(menTshirt);
+            sortByPrice(menTshirt)
     });
 
     //get The Women
@@ -360,7 +632,46 @@
         sortByPrice(woman)
 
          
-    })
+    });
+    //get Shirt
+    document.getElementById("Shirt").addEventListener("click",function(){
+        console.log("Shirt");
+        display(Shirt);
+        sortByPrice(Shirt)
+
+         
+    });
+    //get Jacket
+    document.getElementById("Jacket").addEventListener("click",function(){
+        console.log("jacket");
+        display(Jacket);
+        sortByPrice(Jacket)    
+    });
+    //get red
+     document.getElementById("Red").addEventListener("click",function(){
+        console.log("jacket");
+        display(red);
+        sortByPrice(red)    
+    });
+    //get Blue
+    document.getElementById("Blue").addEventListener("click",function(){
+        console.log("jacket");
+        display(Blue);
+        sortByPrice(Blue)    
+    });
+    //get printed
+    document.getElementById("Printed").addEventListener("click",function(){
+        console.log("jacket");
+        display(printed);
+        sortByPrice(printed)    
+    });
+    //get Plain
+    document.getElementById("Plain").addEventListener("click",function(){
+        console.log("jacket");
+        display(plain);
+        sortByPrice(plain)    
+    });
+
 
     sortByPrice(dataOfProduct);
   function display(dataOfProduct)
@@ -383,9 +694,15 @@
     var p = document.createElement("p");
     p.textContent = item.name;
    
+
     var pPrice = document.createElement("p");
     pPrice.textContent = `MRP ${item.price}`;
-    div.append(img, button, p, pPrice);
+
+    var cutprice = document.createElement("p")
+    cutprice.setAttribute("id","cutpricePteg")
+    cutprice.textContent = `${item.cutprice} For TriBe Members`;
+
+    div.append(img, button, p, pPrice,cutprice);
     rightDiv.append(div);
   });
  }
