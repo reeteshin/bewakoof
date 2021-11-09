@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WhishList</title>
+    <style>
+        #mainDiv
+        {
+            display: grid;
+           
+            grid-template-columns: 25% 25% 25% 25%;
+            height: 700px;
+            border: 1px solid red;
+            overflow: scroll;
+            row-gap: 10px;
+            column-gap: 5px;
+        }
+        #subDiv 
+        {
+            background-color: tomato;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="mainDiv"></div>
+</body>
+</html>
+<script>
+    var mainDiv = document.getElementById("mainDiv");
+    var WhishData = JSON.parse(localStorage.getItem("WishList"))
+    console.log(WhishData);
+    WhishData.map(function (item){
+
+        var subDiv = document.createElement("div");
+        subDiv.setAttribute("id","subDiv");
+
+        var img = document.createElement("img");
+        img.setAttribute("src",item.imgUrl);
+
+        var name = document.createElement("p");
+        name.textContent = item.name;
+
+        var price = document.createElement("p");
+        price.textContent = item.price;
+
+        var RemoveButton = document.createElement("button");
+        RemoveButton.setAttribute("id","RemoveButton");
+
+        var moveToBagButton = document.createElement("button");
+        moveToBagButton.setAttribute("id","moveToBagButton")
+        moveToBagButton.textContent= "MOVE TO BAG"
+
+        var cutprice = document.createElement("h4")
+        cutprice.textContent = item.cutprice;
+
+        subDiv.append(img,RemoveButton,name,price,cutprice,moveToBagButton)
+        mainDiv.append(subDiv);
+
+
+    })
+</script>
