@@ -16,12 +16,14 @@
             font-family: 'Roboto', sans-serif;
         }
 
+        
       #mainDiv {
         border: 1px solid slateblue;
         display: grid;
         grid-template-columns: 20% 80%;
         margin-top: 40px;
       }
+
 
       #leftDiv {
         height: 700px;
@@ -38,6 +40,24 @@
         justify-content: center;
         margin-left: 30px;
       }
+        @media screen and (min-width: 0px) and (max-width: 1150px)
+          {
+            #mainDiv{
+               display: grid;
+                grid-template-columns: 0% 100%;
+            }
+            #rightDiv
+            {
+                display: grid;
+                row-gap: 20px;
+                
+                border: 1px solid red;
+                grid-template-columns: 50% 50%;
+                justify-content: space-around;
+            }
+             
+
+          }
       #rightDiv::-webkit-scrollbar,
       #leftDiv::-webkit-scrollbar {
         display: none;
@@ -119,6 +139,7 @@
         background-color: silver;
         width: 75%;
         padding: 5px;
+        padding-right: 20px;
         font-size: 11px;
         font-weight: bolder;
          
@@ -223,7 +244,7 @@
      
 
     <!-- My Code Start From Here Reetesh -->
-    <h1>Dyanamic Headding 7899</h1>
+    <h1 style="padding-top: 100px;">Dyanamic Headding </h1>
 
     <div id="mainDiv">
       <div id="leftDiv">
@@ -831,6 +852,9 @@
     var button = document.createElement("button");
     button.setAttribute("id","button")
     button.innerHTML = "Fav";
+    button.addEventListener("click",function(){
+      addToFav(item);
+    })
 
     var p = document.createElement("p");
     p.textContent = item.name;
@@ -847,7 +871,12 @@
     rightDiv.append(div);
   });
  }
-  
+  //add to fav Function
+  function addToFav(item)
+  {
+    console.log(item);
+  }
+
  function sortByPrice(data)
  {
       
@@ -877,6 +906,5 @@
       document.getElementById("High");
       console.log("item");
  }
- dataArray.push(dataOfProduct)
-    localStorage.setItem("porductlist",JSON.stringify(dataArray));
+  
 </script>
