@@ -1,5 +1,6 @@
 var arr_color_name = ["white", "Black", "Light nevyblue", "Maroon red", "Smoky white", "Sky blue", "yellow", "water"];
 
+var cart_arr = [] || localStorage.getItem("cart_local");
 //function for highlite color
 function color_border(x) {
     x.style.border = "4px solid teal";
@@ -431,7 +432,7 @@ document.getElementById("bt1").addEventListener("click", function () {
         document.getElementById("main_image").src = image_collection[0].img4
     })
 
-
+    add_to_cart(image_collection[0]);
 
 })
 
@@ -455,6 +456,7 @@ document.getElementById("bt2").addEventListener("click", function () {
     document.getElementById("button_4").addEventListener("click", function () {
         document.getElementById("main_image").src = image_collection[1].img4
     })
+    add_to_cart(image_collection[1]);
 })
 
 
@@ -478,6 +480,7 @@ document.getElementById("bt3").addEventListener("click", function () {
     document.getElementById("button_4").addEventListener("click", function () {
         document.getElementById("main_image").src = image_collection[2].img4
     })
+    add_to_cart(image_collection[2]);
 })
 
 
@@ -501,6 +504,7 @@ document.getElementById("bt4").addEventListener("click", function () {
     document.getElementById("button_4").addEventListener("click", function () {
         document.getElementById("main_image").src = image_collection[3].img4
     })
+    add_to_cart(image_collection[3]);
 })
 
 
@@ -524,6 +528,7 @@ document.getElementById("bt5").addEventListener("click", function () {
     document.getElementById("button_4").addEventListener("click", function () {
         document.getElementById("main_image").src = image_collection[4].img4
     })
+    add_to_cart(image_collection[4]);
 
 })
 
@@ -547,6 +552,7 @@ document.getElementById("bt6").addEventListener("click", function () {
     document.getElementById("button_4").addEventListener("click", function () {
         document.getElementById("main_image").src = image_collection[5].img4
     })
+    add_to_cart(image_collection[5]);
 })
 
 // seventh color selection
@@ -568,6 +574,7 @@ document.getElementById("bt7").addEventListener("click", function () {
     document.getElementById("button_4").addEventListener("click", function () {
         document.getElementById("main_image").src = image_collection[6].img4
     })
+    add_to_cart(image_collection[6]);
 })
 
 // eigth color sselection
@@ -578,7 +585,6 @@ document.getElementById("bt8").addEventListener("click", function () {
     })
 
     document.getElementById("button_2").addEventListener("click", function () {
-        console.log("hi");
         document.getElementById("main_image").src = image_collection[7].img2
     })
 
@@ -589,6 +595,8 @@ document.getElementById("bt8").addEventListener("click", function () {
     document.getElementById("button_4").addEventListener("click", function () {
         document.getElementById("main_image").src = image_collection[7].img4
     })
+    add_to_cart(image_collection[7]);
+
 })
 
 
@@ -646,4 +654,13 @@ document.getElementById("button_4").addEventListener("mouseleave", function () {
 
 })
 
+//click on cart
+function add_to_cart(ele) {
+    document.getElementById("cart").addEventListener("click", function () {
+        cart_arr.push(ele);
+        localStorage.setItem("cart_local", JSON.stringify(cart_arr))
+        //console.log(ele)
+        console.log(cart_arr)
+    })
 
+}
