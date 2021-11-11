@@ -5,8 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #mainDiv
+        {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            border: 1px solid red;
+        }
+        #underLeftDiv
+        {
+                 
+                 border: 1px solid yellow;
+        }
+        #leftDiv
+        {
+            border: 1px solid red;
+           display: flex;
+           grid-template-columns: 100%;
+            
+           
+            
+        }
+          
+        #underLeftDiv > img
+        {
+            float: right;
+            
+            width: 100px;
+
+        } 
+    </style>
 </head>
 <body>
-    <h1>I will Complete it after WishList</h1>
+     <div id="mainDiv">
+        
+     </div>
 </body>
 </html>
+<script>
+    var bagData = JSON.parse(localStorage.getItem("bagItem"));
+    console.log(bagData);
+    var leftDiv  = document.getElementById("leftDiv");
+    
+     bagData.map(function(item){
+          
+
+        var divMain = document.createElement("div");
+        
+     })
+</script>
