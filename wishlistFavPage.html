@@ -128,12 +128,12 @@
                 </li>
                 <li class="main-nav_item">
                     <a href="#">
-                        <i class="far fa-heart"></i>
+                        <i id="hart" class="far fa-heart"></i>
                     </a>
                 </li>
                 <li class="main-nav_item">
                     <a href="#">
-                        <i class="fas fa-shopping-bag"></i>
+                        <i id = "bag" class="fas fa-shopping-bag"></i>
                     </a>
                 </li>
 
@@ -271,6 +271,13 @@
              
    }
 
+    
+  // document.querySelector(".far fa-heart")
+       document.querySelector("#hart").addEventListener("click",function(){
+    window.location.href = "wishlistFavPage.html"
+  })
 
-     
+   document.querySelector("#bag").addEventListener("click",function(){
+    window.location.href = "bag.html"
+  })
 </script>
