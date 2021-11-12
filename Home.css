@@ -3,7 +3,6 @@
   SECONDARY COLOR - #51cccc
 */
 
-
 * {
   padding: 0;
   margin: 0;
@@ -11,9 +10,8 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1;
-  margin-top: 150px;
   font-weight: 400;
   color: #2d2d2d;
 }
@@ -36,11 +34,47 @@ h3 {
   margin-bottom: 15px;
 }
 
-/**** MAIN NAVIGATION *****/
+/* ****** HEADER TOP NAVIGATION */
 
-.main-nav {
-  margin-bottom: 20px;
+.top-nav {
+  background-color: #eee;
 }
+
+.top-nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-nav ul {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.left-nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.right-nav {
+  display: flex;
+  gap: 16px;
+}
+
+.top-nav li {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.top-nav li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/**** MAIN NAVIGATION *****/
 
 .main-nav ul {
   list-style: none;
@@ -70,6 +104,7 @@ h3 {
 
 .section-banner-carousel {
   margin-bottom: 35px;
+  margin-top: 170px;
 }
 
 .carousel {
