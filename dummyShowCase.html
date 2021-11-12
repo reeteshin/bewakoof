@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+
+    #divMain
+    {
+        display: grid;
+        grid-template-columns: 20% 30% 35%;
+        height: 620px;
+        column-gap: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #No1
+    {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 20% 20% 20%;
+        margin: 0px 0px auto auto;
+        row-gap: 35px;
+        border: 1px solid teal;
+    }
+    #No1 > img
+    {
+        width: 100px;
+        height: 100px;
+        
+        border: 1px solid tomato;
+
+    }
+    #No2
+    {
+            height: 510px;
+
+            border: 1px solid yellow;
+    }
+    #No2 >img
+    {
+        width: 100%;
+        height: 100%;
+    }
+    #No3
+    {
+        border: 1px solid tomato;
+    }
+   </style>
+</head>
+<body>
+    <div id = "divMain">
+        <div id="No1">
+            <img id = "img1" src="https://images.bewakoof.com/t320/white-half-sleeve-t-shirt-105-1635793001-1.jpg" alt="">
+            <img id = "img2" src="https://images.bewakoof.com/t320/white-half-sleeve-t-shirt-105-1635793001-1.jpg" alt="">
+            <img id="img3" src="https://images.bewakoof.com/t320/white-half-sleeve-t-shirt-105-1635793001-1.jpg" alt="">
+            <img id = "img4" src="https://images.bewakoof.com/t320/white-half-sleeve-t-shirt-105-1635793001-1.jpg" alt="">
+        </div>
+        <div id="No2">
+           <img id="img5" src="https://images.bewakoof.com/t320/white-half-sleeve-t-shirt-105-1635793001-1.jpg" alt="">
+        </div>
+        <div id="No3">
+            <h3>Bewakoof</h3>
+
+            <h4 id="name">Dummy Producrt Name</h4>
+
+            <h1 id = "price">Rs 1499</h1>
+            <p id ="price"><s>Rs1499</s></p>
+
+            <p>Inclusive of taxes</p>
+            <h3 >Rs <span id ="tribe"></span> For Tribe Member</h3>
+
+            <div>
+                <button>Fav</button>
+                <button>ADD TO BAG</button>
+            </div>
+
+            <p>Dellivering to span pin 467117</p>
+
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var img = JSON.parse(localStorage.getItem("img"));
+
+    document.getElementById("img1").setAttribute("src",img.imgUrl);
+    document.getElementById("img2").setAttribute("src",img.imgUrl);
+    document.getElementById("img3").setAttribute("src",img.imgUrl);
+    document.getElementById("img4").setAttribute("src",img.imgUrl);
+    document.getElementById("img5").setAttribute("src",img.imgUrl);
+
+    document.getElementById("name").textContent = img.name;
+    document.getElementById("tribe").textContent = img.cutprice
+    document.getElementById("price").textContent = img.price;
+
+</script>

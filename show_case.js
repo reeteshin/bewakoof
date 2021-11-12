@@ -1,12 +1,12 @@
 var arr_color_name = ["white", "Black", "Light nevyblue", "Maroon red", "Smoky white", "Sky blue", "yellow", "water"];
 
-<<<<<<< HEAD
+ 
 var cart_arr = [] || localStorage.getItem("img");
 
 
-=======
+ 
 var cart_arr = JSON.parse(localStorage.getItem("image_show_case"));
->>>>>>> fc813e4c8ac78773f54116d194a716fbfc9755c5
+ 
 //function for highlite color
 function color_border(x) {
     x.style.border = "4px solid teal";
@@ -353,7 +353,7 @@ document.getElementById("btn").addEventListener("click", function () {
 
 // ]
 
-var main_image = document.createElement(img.);
+var main_image = document.createElement("img");
 main_image.id = "main_image"
 main_image.src = image_show_case.imgUrl;
 var main_div = document.getElementById("image_containt");
