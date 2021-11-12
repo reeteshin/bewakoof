@@ -1,261 +1,224 @@
+var arr_color_name = ["white", "Black", "Light nevyblue", "Maroon red", "Smoky white", "Sky blue", "yellow", "water"];
 
+var cart_arr = [] || localStorage.getItem("cart_local");
+//function for highlite color
+function color_border(x) {
+    x.style.border = "4px solid teal";
+    x.style.height = "61px";
+    x.style.width = "61px";
+}
 
+function color_normal(x) {
+    x.style.border = "3px solid transparent";
+    x.style.height = "60px";
+    x.style.width = "60px";
+}
+// button 1
 document.getElementById("bt1").addEventListener("mouseover", function () {
     var change_1 = document.getElementById("bt1");
-    change_1.style.border = "4px solid teal";
-    change_1.style.height = "61px";
-    change_1.style.width = "61px";
+    color_border(change_1)
 
-    document.getElementById("color_name").textContent = "white";
+    document.getElementById("color_name").textContent = arr_color_name[0];
 })
 document.getElementById("bt1").addEventListener("mouseleave", function () {
     var change_1 = document.getElementById("bt1");
-    change_1.style.border = "3px solid transparent";
-    change_1.style.height = "60px";
-    change_1.style.width = "60px";
+    color_normal(change_1)
+
     document.getElementById("color_name").textContent = "";
 })
 // button 2
 document.getElementById("bt2").addEventListener("mouseover", function () {
     var change_1 = document.getElementById("bt2");
-    change_1.style.border = "4px solid teal";
-    change_1.style.height = "61px";
-    change_1.style.width = "61px";
+    color_border(change_1)
 
-    document.getElementById("color_name").textContent = "Black";
+    document.getElementById("color_name").textContent = arr_color_name[1];
 })
 document.getElementById("bt2").addEventListener("mouseleave", function () {
     var change_1 = document.getElementById("bt2");
-    change_1.style.border = "3px solid transparent";
-    change_1.style.height = "60px";
-    change_1.style.width = "60px";
+    color_normal(change_1)
 
     document.getElementById("color_name").textContent = "";
 })
 // button 3
 document.getElementById("bt3").addEventListener("mouseover", function () {
     var change_1 = document.getElementById("bt3");
-    change_1.style.border = "4px solid teal";
-    change_1.style.height = "61px";
-    change_1.style.width = "61px";
+    color_border(change_1)
 
-    document.getElementById("color_name").textContent = "Light nevyblue";
+    document.getElementById("color_name").textContent = arr_color_name[2];
 })
 document.getElementById("bt3").addEventListener("mouseleave", function () {
     var change_1 = document.getElementById("bt3");
-    change_1.style.border = "3px solid transparent";
-    change_1.style.height = "60px";
-    change_1.style.width = "60px";
+    color_normal(change_1)
 
     document.getElementById("color_name").textContent = "";
 })
 // button 4
 document.getElementById("bt4").addEventListener("mouseover", function () {
     var change_1 = document.getElementById("bt4");
-    change_1.style.border = "4px solid teal";
-    change_1.style.height = "61px";
-    change_1.style.width = "61px";
+    color_border(change_1)
 
-    document.getElementById("color_name").textContent = "Maroon red";
+    document.getElementById("color_name").textContent = arr_color_name[3];
 })
 document.getElementById("bt4").addEventListener("mouseleave", function () {
     var change_1 = document.getElementById("bt4");
-    change_1.style.border = "3px solid transparent";
-    change_1.style.height = "60px";
-    change_1.style.width = "60px";
+    color_normal(change_1)
 
     document.getElementById("color_name").textContent = "";
 })
 // button 5
 document.getElementById("bt5").addEventListener("mouseover", function () {
     var change_1 = document.getElementById("bt5");
-    change_1.style.border = "4px solid teal";
-    change_1.style.height = "61px";
-    change_1.style.width = "61px";
+    color_border(change_1)
 
-    document.getElementById("color_name").textContent = "Smoky white";
+    document.getElementById("color_name").textContent = arr_color_name[4];
 })
 document.getElementById("bt5").addEventListener("mouseleave", function () {
     var change_1 = document.getElementById("bt5");
-    change_1.style.border = "3px solid transparent";
-    change_1.style.height = "60px";
-    change_1.style.width = "60px";
+    color_normal(change_1)
 
     document.getElementById("color_name").textContent = "";
 })
 // button 6
 document.getElementById("bt6").addEventListener("mouseover", function () {
     var change_1 = document.getElementById("bt6");
-    change_1.style.border = "4px solid teal";
-    change_1.style.height = "61px";
-    change_1.style.width = "61px";
+    color_border(change_1)
 
-    document.getElementById("color_name").textContent = "Sky blue";
+    document.getElementById("color_name").textContent = arr_color_name[5];
 })
 document.getElementById("bt6").addEventListener("mouseleave", function () {
     var change_1 = document.getElementById("bt6");
-    change_1.style.border = "3px solid transparent";
-    change_1.style.height = "60px";
-    change_1.style.width = "60px";
+    color_normal(change_1)
 
     document.getElementById("color_name").textContent = "";
 })
 // button 7
 document.getElementById("bt7").addEventListener("mouseover", function () {
     var change_1 = document.getElementById("bt7");
-    change_1.style.border = "4px solid teal";
-    change_1.style.height = "61px";
-    change_1.style.width = "61px";
-
-    document.getElementById("color_name").textContent = "yello";
+    color_border(change_1)
+    document.getElementById("color_name").textContent = arr_color_name[6];
 })
 document.getElementById("bt7").addEventListener("mouseleave", function () {
     var change_1 = document.getElementById("bt7");
-    change_1.style.border = "3px solid transparent";
-    change_1.style.height = "60px";
-    change_1.style.width = "60px";
+    color_normal(change_1)
     document.getElementById("color_name").textContent = "";
 })
 // button 8
 document.getElementById("bt8").addEventListener("mouseover", function () {
     var change_1 = document.getElementById("bt8");
-    change_1.style.border = "4px solid teal";
-    change_1.style.height = "61px";
-    change_1.style.width = "61px";
+    color_border(change_1)
 
-    document.getElementById("color_name").textContent = "water";
+    document.getElementById("color_name").textContent = arr_color_name[7];
 })
 document.getElementById("bt8").addEventListener("mouseleave", function () {
     var change_1 = document.getElementById("bt8");
-    change_1.style.border = "3px solid transparent";
-    change_1.style.height = "60px";
-    change_1.style.width = "60px";
+    color_normal(change_1)
 
     document.getElementById("color_name").textContent = "";
 })
+// done up to here ---------------------
 
 // size sielection
-//s button
-document.getElementById("s").addEventListener("mouseover", function () {
 
-    var change_1 = document.getElementById("s");
-    change_1.style.border = "4px solid teal";
-    change_1.style.borderStyle = "double"
-    change_1.style.height = "61px";
-    change_1.style.width = "61px";
+var arr_size = ["s", "m", "l", "xl", "xxl", "xxxl"]
+function border_size(x) {
+    x.style.border = "4px solid teal";
+    x.style.borderStyle = "double"
+    x.style.height = "61px";
+    x.style.width = "61px";
+}
+function border_normal(y) {
+    y.style.borderStyle = "none"
+    y.style.border = "1px solid rgb(12, 10, 10, 0.281)";
+    y.style.height = "60px";
+    y.style.width = "60px";
+}
+//s button
+document.getElementById(arr_size[0]).addEventListener("mouseover", function () {
+
+    var change_1 = document.getElementById(arr_size[0]);
+    border_size(change_1);
+
 
 })
-document.getElementById("s").addEventListener("mouseleave", function () {
-    var change_1 = document.getElementById("s");
-
-    change_1.style.borderStyle = "none"
-    change_1.style.border = "1px solid rgb(12, 10, 10, 0.281)";
-    change_1.style.height = "60px";
-    change_1.style.width = "60px";
+document.getElementById(arr_size[0]).addEventListener("mouseleave", function () {
+    var change_1 = document.getElementById(arr_size[0]);
+    border_normal(change_1)
 
 })
 //m button
-document.getElementById("m").addEventListener("mouseover", function () {
+document.getElementById(arr_size[1]).addEventListener("mouseover", function () {
 
-    var change_1 = document.getElementById("m");
-    change_1.style.border = "4px solid teal";
-    change_1.style.borderStyle = "double"
-    change_1.style.height = "61px";
-    change_1.style.width = "61px";
+    var change_1 = document.getElementById(arr_size[1]);
+    border_size(change_1);
 
 })
-document.getElementById("m").addEventListener("mouseleave", function () {
-    var change_1 = document.getElementById("m");
+document.getElementById(arr_size[1]).addEventListener("mouseleave", function () {
+    var change_1 = document.getElementById(arr_size[1]);
 
-    change_1.style.borderStyle = "none"
-    change_1.style.border = "1px solid rgba(12, 10, 10, 0.281)";
-    change_1.style.height = "60px";
-    change_1.style.width = "60px";
+    border_normal(change_1)
 
 })
 //l button
-document.getElementById("l").addEventListener("mouseover", function () {
+document.getElementById(arr_size[2]).addEventListener("mouseover", function () {
 
-    var change_1 = document.getElementById("l");
-    change_1.style.border = "4px solid teal";
-    change_1.style.borderStyle = "double"
-    change_1.style.height = "61px";
-    change_1.style.width = "61px";
+    var change_1 = document.getElementById(arr_size[2]);
+    border_size(change_1);
 
 })
-document.getElementById("l").addEventListener("mouseleave", function () {
-    var change_1 = document.getElementById("l");
+document.getElementById(arr_size[2]).addEventListener("mouseleave", function () {
+    var change_1 = document.getElementById(arr_size[2]);
 
-    change_1.style.borderStyle = "none"
-    change_1.style.border = "1px solid rgb(12, 10, 10, 0.281)";
-    change_1.style.height = "60px";
-    change_1.style.width = "60px";
+    border_normal(change_1)
 
 })
 //xl button
-document.getElementById("xl").addEventListener("mouseover", function () {
+document.getElementById(arr_size[3]).addEventListener("mouseover", function () {
 
-    var change_1 = document.getElementById("xl");
-    change_1.style.border = "4px solid teal";
-    change_1.style.borderStyle = "double"
-    change_1.style.height = "61px";
-    change_1.style.width = "61px";
+    var change_1 = document.getElementById(arr_size[3]);
+    border_size(change_1);
 
 })
-document.getElementById("xl").addEventListener("mouseleave", function () {
-    var change_1 = document.getElementById("xl");
+document.getElementById(arr_size[3]).addEventListener("mouseleave", function () {
+    var change_1 = document.getElementById(arr_size[3]);
 
-    change_1.style.borderStyle = "none"
-    change_1.style.border = "1px solid rgba(12, 10, 10, 0.281)";
-    change_1.style.height = "60px";
-    change_1.style.width = "60px";
+    border_normal(change_1);
 
 })
 //xxl button
-document.getElementById("xxl").addEventListener("mouseover", function () {
+document.getElementById(arr_size[4]).addEventListener("mouseover", function () {
 
-    var change_1 = document.getElementById("xxl");
-    change_1.style.border = "4px solid teal";
-    change_1.style.borderStyle = "double"
-    change_1.style.height = "61px";
-    change_1.style.width = "61px";
+    var change_1 = document.getElementById(arr_size[4]);
+    border_size(change_1);
 
 })
-document.getElementById("xxl").addEventListener("mouseleave", function () {
-    var change_1 = document.getElementById("xxl");
+document.getElementById(arr_size[4]).addEventListener("mouseleave", function () {
+    var change_1 = document.getElementById(arr_size[4]);
 
-    change_1.style.borderStyle = "none"
-    change_1.style.border = "1px solid rgb(12, 10, 10, 0.281)";
-    change_1.style.height = "60px";
-    change_1.style.width = "60px";
+    border_normal(change_1);
 
 })
 //xxxl button
-document.getElementById("xxxl").addEventListener("mouseover", function () {
+document.getElementById(arr_size[5]).addEventListener("mouseover", function () {
 
-    var change_1 = document.getElementById("xxxl");
-    change_1.style.border = "4px solid teal";
-    change_1.style.borderStyle = "double"
-    change_1.style.height = "61px";
-    change_1.style.width = "61px";
+    var change_1 = document.getElementById(arr_size[5]);
+    border_size(change_1);
 
 })
-document.getElementById("xxxl").addEventListener("mouseleave", function () {
-    var change_1 = document.getElementById("xxxl");
+document.getElementById(arr_size[5]).addEventListener("mouseleave", function () {
+    var change_1 = document.getElementById(arr_size[5]);
 
-    change_1.style.borderStyle = "none"
-    change_1.style.border = "1px solid rgba(12, 10, 10, 0.281)";
-    change_1.style.height = "60px";
-    change_1.style.width = "60px";
+    border_normal(change_1);
 
 })
 
+var arr_pin = null;
 var delivery_main = document.getElementById("delivery");
 
 var div_min = document.createElement("div");
 div_min.id = "div_min"
 var input_1 = document.createElement("input")
 input_1.id = "pin_in"
+input_1.type = "number"
 
 var check = document.createElement("button");
 check.id = "btn";
@@ -264,16 +227,64 @@ div_min.append(input_1, check);
 delivery_main.append(div_min)
 document.getElementById("btn").textContent = "Check";
 
-var out1 = document.getElementById("pin_in");
-console.log(out1)
-
-// document.getElementById("btn").addEventListener("click", function () {
-//     document.getElementById("div_min").innerHTML = "";
-//     document.getElementById("div_min").style.border = "1px solid transparent"
 
 
+var delivery_address = document.createElement("div");
+delivery_address.id = "delivery_address"
+var location_div = document.createElement("div");
+location_div.id = "location_div"
 
-// })
+var location_icon = document.createElement("img");
+location_icon.id = "location_icon"
+location_icon.src = "https://images.bewakoof.com/web/pin-1595571616.png";
+location_div.append(location_icon)
+
+var delivery_detail = document.createElement("p");
+delivery_detail.id = "delivery_detail";
+delivery_detail.textContent = "Delivering to"
+
+var pin_number = document.createElement("p");
+pin_number.id = "pin_number";
+pin_number.textContent = "  ******";
+
+var div_contain_detail = document.createElement("div")
+div_contain_detail.id = "div_contain_detail";
+div_contain_detail.append(delivery_detail, pin_number)
+
+var change_button_div = document.createElement("div");
+var change_button = document.createElement("button");
+change_button.id = "change_button";
+change_button.textContent = "change";
+change_button_div.append(change_button)
+delivery_address.append(location_div, div_contain_detail, change_button_div);
+
+
+//input pin
+
+
+
+//click button check pin
+document.getElementById("btn").addEventListener("click", function () {
+
+    var out1 = document.getElementById("pin_in");
+    var out2 = out1.value;
+    arr_pin = out2;
+    if (out2.length == 6) {
+
+        document.getElementById("div_min").style.border = "2px solid transparent"
+        document.getElementById("div_min").innerHTML = "";
+        div_min.append(delivery_address)
+
+
+
+    }
+    else {
+        document.getElementById("div_min").style.border = "2px solid red"
+
+        out1.value = "";
+        // alert("please enter valid pin")
+    }
+})
 
 
 var image_collection = [
@@ -338,7 +349,7 @@ var image_collection = [
 
 var main_image = document.createElement("img");
 main_image.id = "main_image"
-main_image.src = "https://images.bewakoof.com/t540/white-half-sleeve-t-shirt-105-1635793001-1.jpg";
+main_image.src = image_collection[0].img_main;
 var main_div = document.getElementById("image_containt");
 
 main_div.append(main_image)
@@ -421,6 +432,8 @@ document.getElementById("bt1").addEventListener("click", function () {
         document.getElementById("main_image").src = image_collection[0].img4
     })
 
+    add_to_cart(image_collection[0]);
+
 })
 
 //second color selection
@@ -443,6 +456,7 @@ document.getElementById("bt2").addEventListener("click", function () {
     document.getElementById("button_4").addEventListener("click", function () {
         document.getElementById("main_image").src = image_collection[1].img4
     })
+    add_to_cart(image_collection[1]);
 })
 
 
@@ -466,6 +480,7 @@ document.getElementById("bt3").addEventListener("click", function () {
     document.getElementById("button_4").addEventListener("click", function () {
         document.getElementById("main_image").src = image_collection[2].img4
     })
+    add_to_cart(image_collection[2]);
 })
 
 
@@ -489,6 +504,7 @@ document.getElementById("bt4").addEventListener("click", function () {
     document.getElementById("button_4").addEventListener("click", function () {
         document.getElementById("main_image").src = image_collection[3].img4
     })
+    add_to_cart(image_collection[3]);
 })
 
 
@@ -512,6 +528,7 @@ document.getElementById("bt5").addEventListener("click", function () {
     document.getElementById("button_4").addEventListener("click", function () {
         document.getElementById("main_image").src = image_collection[4].img4
     })
+    add_to_cart(image_collection[4]);
 
 })
 
@@ -535,6 +552,7 @@ document.getElementById("bt6").addEventListener("click", function () {
     document.getElementById("button_4").addEventListener("click", function () {
         document.getElementById("main_image").src = image_collection[5].img4
     })
+    add_to_cart(image_collection[5]);
 })
 
 // seventh color selection
@@ -556,6 +574,7 @@ document.getElementById("bt7").addEventListener("click", function () {
     document.getElementById("button_4").addEventListener("click", function () {
         document.getElementById("main_image").src = image_collection[6].img4
     })
+    add_to_cart(image_collection[6]);
 })
 
 // eigth color sselection
@@ -566,7 +585,6 @@ document.getElementById("bt8").addEventListener("click", function () {
     })
 
     document.getElementById("button_2").addEventListener("click", function () {
-        console.log("hi");
         document.getElementById("main_image").src = image_collection[7].img2
     })
 
@@ -577,6 +595,8 @@ document.getElementById("bt8").addEventListener("click", function () {
     document.getElementById("button_4").addEventListener("click", function () {
         document.getElementById("main_image").src = image_collection[7].img4
     })
+    add_to_cart(image_collection[7]);
+
 })
 
 
@@ -588,4 +608,59 @@ function display_image_onclick(k, item) {
     document.getElementById("image2").src = item.img2;
     document.getElementById("image3").src = item.img3;
     document.getElementById("image4").src = item.img4;
+}
+
+//hover effect for "button one" in image icons left most
+document.getElementById("button_1").addEventListener("mouseover", function () {
+    var change_1 = document.getElementById("button_1");
+    change_1.style.border = "5px solid teal";
+})
+document.getElementById("button_1").addEventListener("mouseleave", function () {
+    var change_1 = document.getElementById("button_1");
+    change_1.style.border = "2px solid teal";
+
+})
+
+//hover effect for "button two" in image icons left most
+document.getElementById("button_2").addEventListener("mouseover", function () {
+    var change_1 = document.getElementById("button_2");
+    change_1.style.border = "5px solid teal";
+})
+document.getElementById("button_2").addEventListener("mouseleave", function () {
+    var change_1 = document.getElementById("button_2");
+    change_1.style.border = "2px solid teal";
+
+})
+
+//hover effect for "button three" in image icons left most
+document.getElementById("button_3").addEventListener("mouseover", function () {
+    var change_1 = document.getElementById("button_3");
+    change_1.style.border = "5px solid teal";
+})
+document.getElementById("button_3").addEventListener("mouseleave", function () {
+    var change_1 = document.getElementById("button_3");
+    change_1.style.border = "2px solid teal";
+
+})
+
+//hover effect for "button four" in image icons left most
+document.getElementById("button_4").addEventListener("mouseover", function () {
+    var change_1 = document.getElementById("button_4");
+    change_1.style.border = "5px solid teal";
+})
+document.getElementById("button_4").addEventListener("mouseleave", function () {
+    var change_1 = document.getElementById("button_4");
+    change_1.style.border = "2px solid teal";
+
+})
+
+//click on cart
+function add_to_cart(ele) {
+    document.getElementById("cart").addEventListener("click", function () {
+        cart_arr.push(ele);
+        localStorage.setItem("cart_local", JSON.stringify(cart_arr))
+        //console.log(ele)
+        console.log(cart_arr)
+    })
+
 }
