@@ -63,10 +63,10 @@
             <h4 id="name">Dummy Producrt Name</h4>
 
             <h1 id = "price">Rs 1499</h1>
-            <p id ="price"><s>Rs1499</s></p>
+            <p ><s id ="pricecut">Rs1499</s></p>
 
             <p>Inclusive of taxes</p>
-            <h3 >Rs <span id ="tribe"></span> For Tribe Member</h3>
+            <h3 ><span id ="tribe"></span> For Tribe Member</h3>
 
             <div>
                 <button>Fav</button>
@@ -89,7 +89,8 @@
     document.getElementById("img5").setAttribute("src",img.imgUrl);
 
     document.getElementById("name").textContent = img.name;
-    document.getElementById("tribe").textContent = img.cutprice
-    document.getElementById("price").textContent = img.price;
+    document.getElementById("tribe").textContent = `₹${img.cutprice}`;
+    document.getElementById("pricecut").textContent = `₹${img.price}`;
+    document.getElementById("price").textContent = `₹${img.price}`;
 
 </script>
