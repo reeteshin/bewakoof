@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+    <style>
+        #mainDiv
+        {
+            display: grid;
+            grid-template-columns: 60% 30%;
+            column-gap: 20px;
+            padding-left: 100px;
+            padding-top: 100px;
+            
+            
+        }
+        #left
+        {
+            border-radius: 5px;
+            border: 2px solid silver;
+             
+        }
+        #left > .Address
+        {
+            border-radius: 5px;
+            background-color: silver;
+            
+        }
+        #left > p
+        {
+            padding: 20px;
+            
+            font-weight: bolder;
+        }
+         #left > hr
+         {
+             width: 80%;
+             border-radius: 50%;
+                height: 2px;
+              background-color: silver;
+         }
+
+         #PriceSummaryDiv
+        {
+            border-radius: 5px;
+            border: 2px solid silver;
+        }
+         #PriceSummaryDiv > p
+         {
+            padding: 10px;
+            font-weight: bolder;
+            
+         }
+          
+        #PriceSummary
+        {
+            background-color: silver;
+            padding: 20px 0px 20px 10px;
+            border-radius: 5px;
+        }
+        #save
+        {
+            border-radius: 10px;
+            padding: 10px;
+            padding-left: 100px;
+            background-color: silver;
+        }
+        
+        #total > button
+        {
+            height: 60px;
+            width: 100%;
+            padding: 10px;
+            margin-top: 12%;             
+            border: none;
+            background-color: rgb(108, 189, 255);
+            border-radius: 4px;
+        }
+        
+
+        #PriceSummaryDiv p span
+        {
+            float: right;
+        }
+         
+    </style>
+</head>
+<body>
+    <div id = "mainDiv">
+        <div id="left">
+            <P class="Address">DELIVERY ADDRESS</P>
+            <p id="Pinecode"></p>
+            <hr>
+            <p id ="Address"></p>
+            <hr>
+            <p id="Locality"></p>
+            <hr>
+            <p id="City"></p>
+            <hr>
+            <p id="State"></p>
+            <hr>
+            <p id="Country"></p>
+            <hr>
+            <p id = "Mob"></p>
+        </div>
+        <div id = "divMainRight">
+            
+            <div id = "PriceSummaryDiv">
+                <p id ="PriceSummary" style="padding: 20px 0px 20px 10px;">Price Summary</p>
+                 
+                <p id ="totalmrp">Item MRP<span class="totalmrp"></span></p>
+                <p id ="delivery">Delivery<span class="delivery"></span></p>
+                <p id ="bagdiscount">Bag Discount <span class="bagdiscount"></span></p>
+                <p id ="subtotal">Sub Total<span class="subtotal">₹</span></p>
+                <p id="save">You Save <span class="yousave"></span> on this order</p>
+                <div id="total">
+                     
+                    <button>CLICK TO PAY<p  id="totalprice"></p></button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var Address = JSON.parse(localStorage.getItem("Address"));
+    document.getElementById("Pinecode").textContent = `Pinecode :- ${Address[0] || "NULL"}`;
+    document.getElementById("Address").textContent = `Address :- ${Address[1] || "NULL"}`;
+    document.getElementById("Locality").textContent = `Locality :- ${Address[2] || "NULL"}`;
+    document.getElementById("City").textContent = `City :- ${Address[3] || "NULL"}`;
+    document.getElementById("State").textContent = `State :- ${Address[4] || "NULL"} `;
+    document.getElementById("Country").textContent = `Country :- ${Address[5]  || "NULL"}`;
+    
+     document.getElementById("Mob").textContent = `Mobile Number :- ${Address[6] || "NULL"}`;
+
+
+    var totalSum = JSON.parse(localStorage.getItem("priceS"));
+    var bagdiscount = JSON.parse(localStorage.getItem("bagdisscount"));
+
+    document.querySelector(".totalmrp").textContent = totalSum;
+    document.querySelector(".delivery").textContent = "Free"
+    document.querySelector(".bagdiscount").textContent = `Rs${bagdiscount || 0}`;
+    document.querySelector(".subtotal").textContent = `${totalSum - bagdiscount}`;
+    document.querySelector(".yousave").textContent = `Rs${bagdiscount}`;
+
+    document.querySelector("#totalprice").textContent = `${totalSum - bagdiscount}`;
+</script>

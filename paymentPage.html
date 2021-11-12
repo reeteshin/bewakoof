@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #Pay
+        {
+            border: 2px solid silver;
+            width: 400px;
+            height: 400px;
+            margin: auto;
+            padding: 10px;
+            border-radius: 5px;
+           
+        }
+        #pay
+        {
+            float: right;
+        }
+        #CN>input
+        {
+            float: right;
+            padding: 5px;
+            background-color: rgb(251, 255, 30);
+             
+        }
+        #Name>input
+        {
+            float: right;
+            padding: 5px;
+             background-color: rgb(251, 255, 30);
+        }
+        #Date>input
+        {
+            float: right;
+            padding: 5px;
+             background-color: rgb(251, 255, 30);
+        }
+        #Cvv >input
+        {
+            float: right;
+            padding: 5px;
+             background-color: rgb(251, 255, 30);
+        }
+        #Pay > h3
+        {
+             color: rgb(15, 138, 56);
+        }
+        #payButton
+        {
+            width: 100%;
+            height: 50px;
+            margin-top: 45px;
+             background-color: rgb(251, 255, 30);
+            border: none;
+            font-style: normal;
+            font-weight: bolder;
+            color: rgb(15, 138, 56);
+
+        }
+        #Amount
+        {
+            float: right;
+            color: rgb(255, 0, 191);
+        }
+
+    </style>
+</head>
+<body>
+    <div id = "MainDiv">
+        <h1 style="text-align: center; padding-top: 10px ;color: teal;font-style: oblique;">Payment Getway</h1>
+        <div id = "Pay">
+            <p>BEBIT/<span style="color: red;">CREDIT </span> CARD <span id="Amount"></span></p>
+            <hr>
+            <h3 id="CN">Card Number <input type="number" id="cardN" placeholder="Card Number 16 Digit"></h3>
+            
+
+            <h3 id = "Name">Name On Card <input type="text" id="cardN1" placeholder="Name On Card"></h3>
+
+            <h3 id="Date">Expiry (MM/YY) <input type="text" id="cardN2" placeholder="Date Of Card (Expiry)"></h3>
+
+            <h3 id ="Cvv">CCV <input type="password" id="cardN3" placeholder="3 Dgit Number"></h3>
+
+             <p style="padding: 10px;">This tansaction you make is totaly secure we Do not save your CVV number</p>
+            
+            <button  id="payButton">Pay Now</button>
+
+
+
+
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var bagdiscount = JSON.parse(localStorage.getItem("bagdisscount")) || 0;
+    var price = JSON.parse(localStorage.getItem("priceS"));
+    
+    document.getElementById("Amount").innerHTML = `AMOUNT :- ${price - bagdiscount}`;
+
+    
+
+    document.getElementById("payButton").addEventListener("click",function(){
+        var CN = document.getElementById("cardN").value;
+         var CN1 = document.getElementById("cardN1").value;
+          var CN2 = document.getElementById("cardN2").value;
+           var CN3 = document.getElementById("cardN3").value;
+         
+        if(CN == "" || CN1 == "" || CN2 == "" ||CN3 =="")
+        {
+            alert("Please Enter All Card Details To Pay");
+        }
+        else
+        {
+            alert("Order Has Been Placed Thnak You For Shopping ...")
+        }
+    })
+</script>

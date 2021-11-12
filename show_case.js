@@ -1,6 +1,8 @@
 var arr_color_name = ["white", "Black", "Light nevyblue", "Maroon red", "Smoky white", "Sky blue", "yellow", "water"];
 
-var cart_arr = [] || localStorage.getItem("cart_local");
+var cart_arr = [] || localStorage.getItem("img");
+
+
 //function for highlite color
 function color_border(x) {
     x.style.border = "4px solid teal";
