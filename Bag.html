@@ -368,6 +368,9 @@
     var ParentDiv  = document.getElementById("ParentDiv");
     var divMainRight = document.getElementById("divMainRight");
     var divMainLeft = document.getElementById("divMainLeft");
+
+     
+
     display(bagData);
     function display(bagData)
     {
@@ -474,11 +477,12 @@
         totalprice.textContent = sum;
 
         localStorage.setItem("priceS",JSON.parse(sum));
+         localStorage.setItem("bagdisscount",JSON.parse(0))
 
 
         document.getElementById("CodeButton").addEventListener("click",function(){
              var inputTag = document.getElementById("Code").value;
-            if(inputTag=="NEW100" && sum > 499 )
+            if(inputTag=="NEW100" && sum >= 499 )
              {
                  totalprice.textContent = sum-100;
                  subtotal.textContent = sum-100;
