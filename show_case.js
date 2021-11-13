@@ -1,6 +1,12 @@
 var arr_color_name = ["white", "Black", "Light nevyblue", "Maroon red", "Smoky white", "Sky blue", "yellow", "water"];
 
-var cart_arr = [] || localStorage.getItem("cart_local");
+ 
+var cart_arr = [] || localStorage.getItem("img");
+
+
+ 
+var cart_arr = JSON.parse(localStorage.getItem("image_show_case"));
+ 
 //function for highlite color
 function color_border(x) {
     x.style.border = "4px solid teal";
@@ -287,81 +293,79 @@ document.getElementById("btn").addEventListener("click", function () {
 })
 
 
-var image_collection = [
-    {
-        img_main: "https://images.bewakoof.com/t540/white-half-sleeve-t-shirt-105-1635793001-1.jpg",
-        img1: "https://images.bewakoof.com/t540/white-half-sleeve-t-shirt-105-1635793001-1.jpg",
-        img2: "https://images.bewakoof.com/t540/white-half-sleeve-t-shirt-105-1635793005-2.jpg",
-        img3: "https://images.bewakoof.com/t540/white-half-sleeve-t-shirt-105-1635793008-3.jpg",
-        img4: "https://images.bewakoof.com/t540/white-half-sleeve-t-shirt-105-1635793012-4.jpg"
-    },
-    {
-        img_main: "https://images.bewakoof.com/t540/jet-black-half-sleeve-t-shirt-106-1635793542-1.jpg",
-        img1: "https://images.bewakoof.com/t540/jet-black-half-sleeve-t-shirt-106-1635793542-1.jpg",
-        img2: "https://images.bewakoof.com/t540/jet-black-half-sleeve-t-shirt-106-1635793545-2.jpg",
-        img3: "https://images.bewakoof.com/t540/jet-black-half-sleeve-t-shirt-106-1635793549-3.jpg",
-        img4: "https://images.bewakoof.com/t540/jet-black-half-sleeve-t-shirt-106-1635793552-4.jpg"
-    },
-    {
-        img_main: "https://images.bewakoof.com/t540/navy-blue-half-sleeve-t-shirt-men-s-plain-t-shirts-115-1630523876-1.jpg",
-        img1: "https://images.bewakoof.com/t540/navy-blue-half-sleeve-t-shirt-men-s-plain-t-shirts-115-1630523876-1.jpg",
-        img2: "https://images.bewakoof.com/t540/navy-blue-half-sleeve-t-shirt-men-s-plain-t-shirts-115-1630325369-2.jpg",
-        img3: "https://images.bewakoof.com/t540/navy-blue-half-sleeve-t-shirt-men-s-plain-t-shirts-115-1630325363-3.jpg",
-        img4: "https://images.bewakoof.com/t540/navy-blue-half-sleeve-t-shirt-men-s-plain-t-shirts-115-1630325357-4.jpg"
-    },
-    {
-        img_main: "https://images.bewakoof.com/t540/bold-red-half-sleeve-t-shirt-men-s-plain-t-shirts-69875-1631631938.jpg",
-        img1: "https://images.bewakoof.com/t540/bold-red-half-sleeve-t-shirt-men-s-plain-t-shirts-69875-1631631938.jpg",
-        img2: "https://images.bewakoof.com/t540/bold-red-half-sleeve-t-shirt-men-s-plain-t-shirts-69875-1631631941.jpg",
-        img3: "https://images.bewakoof.com/t540/bold-red-half-sleeve-t-shirt-men-s-plain-t-shirts-69875-1631631944.jpg",
-        img4: "https://images.bewakoof.com/t540/bold-red-half-sleeve-t-shirt-men-s-plain-t-shirts-69875-1631631947.jpg"
-    },
-    {
-        img_main: "https://images.bewakoof.com/t540/meteor-grey-half-sleeve-t-shirt-211953-1635867997-1.jpg",
-        img1: "https://images.bewakoof.com/t540/meteor-grey-half-sleeve-t-shirt-211953-1635867997-1.jpg",
-        img2: "https://images.bewakoof.com/t540/meteor-grey-half-sleeve-t-shirt-211953-1635868001-2.jpg",
-        img3: "https://images.bewakoof.com/t540/meteor-grey-half-sleeve-t-shirt-211953-1635868004-3.jpg",
-        img4: "https://images.bewakoof.com/t540/meteor-grey-half-sleeve-t-shirt-211953-1635868008-4.jpg"
-    },
-    {
-        img_main: "https://images.bewakoof.com/t540/blue-haze-half-sleeve-t-shirt-men-s-plain-t-shirts-217604-1585890848.jpg",
-        img1: "https://images.bewakoof.com/t540/blue-haze-half-sleeve-t-shirt-men-s-plain-t-shirts-217604-1585890848.jpg",
-        img2: "https://images.bewakoof.com/t540/blue-haze-half-sleeve-t-shirt-men-s-plain-t-shirts-217604-1585890862.jpg",
-        img3: "https://images.bewakoof.com/t540/blue-haze-half-sleeve-t-shirt-men-s-plain-t-shirts-217604-1585890869.jpg",
-        img4: "https://images.bewakoof.com/t540/blue-haze-half-sleeve-t-shirt-men-s-plain-t-shirts-217604-1585890877.jpg"
-    },
-    {
-        img_main: "https://images.bewakoof.com/t540/pineapple-yellow-half-sleeve-t-shirt-men-s-plain-t-shirts-231522-1585315740.jpg",
-        img1: "https://images.bewakoof.com/t540/pineapple-yellow-half-sleeve-t-shirt-men-s-plain-t-shirts-231522-1585315740.jpg",
-        img2: "https://images.bewakoof.com/t540/pineapple-yellow-half-sleeve-t-shirt-men-s-plain-t-shirts-231522-1585315743.jpg",
-        img3: "https://images.bewakoof.com/t540/pineapple-yellow-half-sleeve-t-shirt-men-s-plain-t-shirts-231522-1585315746.jpg",
-        img4: "https://images.bewakoof.com/t540/pineapple-yellow-half-sleeve-t-shirt-men-s-plain-t-shirts-231522-1585315748.jpg"
-    },
-    {
-        img_main: "https://images.bewakoof.com/t540/beach-blue-half-sleeve-t-shirt-329407-1635870362-1.jpg",
-        img1: "https://images.bewakoof.com/t540/beach-blue-half-sleeve-t-shirt-329407-1635870362-1.jpg",
-        img2: "https://images.bewakoof.com/t540/beach-blue-half-sleeve-t-shirt-329407-1635870365-2.jpg",
-        img3: "https://images.bewakoof.com/t540/beach-blue-half-sleeve-t-shirt-329407-1635870369-3.jpg",
-        img4: "https://images.bewakoof.com/t540/beach-blue-half-sleeve-t-shirt-329407-1635870372-4.jpg"
-    },
+// var image_collection = [
+//     {
+//         img_main: "https://images.bewakoof.com/t540/white-half-sleeve-t-shirt-105-1635793001-1.jpg",
+//         img1: "https://images.bewakoof.com/t540/white-half-sleeve-t-shirt-105-1635793001-1.jpg",
+//         img2: "https://images.bewakoof.com/t540/white-half-sleeve-t-shirt-105-1635793005-2.jpg",
+//         img3: "https://images.bewakoof.com/t540/white-half-sleeve-t-shirt-105-1635793008-3.jpg",
+//         img4: "https://images.bewakoof.com/t540/white-half-sleeve-t-shirt-105-1635793012-4.jpg"
+//     },
+//     {
+//         img_main: "https://images.bewakoof.com/t540/jet-black-half-sleeve-t-shirt-106-1635793542-1.jpg",
+//         img1: "https://images.bewakoof.com/t540/jet-black-half-sleeve-t-shirt-106-1635793542-1.jpg",
+//         img2: "https://images.bewakoof.com/t540/jet-black-half-sleeve-t-shirt-106-1635793545-2.jpg",
+//         img3: "https://images.bewakoof.com/t540/jet-black-half-sleeve-t-shirt-106-1635793549-3.jpg",
+//         img4: "https://images.bewakoof.com/t540/jet-black-half-sleeve-t-shirt-106-1635793552-4.jpg"
+//     },
+//     {
+//         img_main: "https://images.bewakoof.com/t540/navy-blue-half-sleeve-t-shirt-men-s-plain-t-shirts-115-1630523876-1.jpg",
+//         img1: "https://images.bewakoof.com/t540/navy-blue-half-sleeve-t-shirt-men-s-plain-t-shirts-115-1630523876-1.jpg",
+//         img2: "https://images.bewakoof.com/t540/navy-blue-half-sleeve-t-shirt-men-s-plain-t-shirts-115-1630325369-2.jpg",
+//         img3: "https://images.bewakoof.com/t540/navy-blue-half-sleeve-t-shirt-men-s-plain-t-shirts-115-1630325363-3.jpg",
+//         img4: "https://images.bewakoof.com/t540/navy-blue-half-sleeve-t-shirt-men-s-plain-t-shirts-115-1630325357-4.jpg"
+//     },
+//     {
+//         img_main: "https://images.bewakoof.com/t540/bold-red-half-sleeve-t-shirt-men-s-plain-t-shirts-69875-1631631938.jpg",
+//         img1: "https://images.bewakoof.com/t540/bold-red-half-sleeve-t-shirt-men-s-plain-t-shirts-69875-1631631938.jpg",
+//         img2: "https://images.bewakoof.com/t540/bold-red-half-sleeve-t-shirt-men-s-plain-t-shirts-69875-1631631941.jpg",
+//         img3: "https://images.bewakoof.com/t540/bold-red-half-sleeve-t-shirt-men-s-plain-t-shirts-69875-1631631944.jpg",
+//         img4: "https://images.bewakoof.com/t540/bold-red-half-sleeve-t-shirt-men-s-plain-t-shirts-69875-1631631947.jpg"
+//     },
+//     {
+//         img_main: "https://images.bewakoof.com/t540/meteor-grey-half-sleeve-t-shirt-211953-1635867997-1.jpg",
+//         img1: "https://images.bewakoof.com/t540/meteor-grey-half-sleeve-t-shirt-211953-1635867997-1.jpg",
+//         img2: "https://images.bewakoof.com/t540/meteor-grey-half-sleeve-t-shirt-211953-1635868001-2.jpg",
+//         img3: "https://images.bewakoof.com/t540/meteor-grey-half-sleeve-t-shirt-211953-1635868004-3.jpg",
+//         img4: "https://images.bewakoof.com/t540/meteor-grey-half-sleeve-t-shirt-211953-1635868008-4.jpg"
+//     },
+//     {
+//         img_main: "https://images.bewakoof.com/t540/blue-haze-half-sleeve-t-shirt-men-s-plain-t-shirts-217604-1585890848.jpg",
+//         img1: "https://images.bewakoof.com/t540/blue-haze-half-sleeve-t-shirt-men-s-plain-t-shirts-217604-1585890848.jpg",
+//         img2: "https://images.bewakoof.com/t540/blue-haze-half-sleeve-t-shirt-men-s-plain-t-shirts-217604-1585890862.jpg",
+//         img3: "https://images.bewakoof.com/t540/blue-haze-half-sleeve-t-shirt-men-s-plain-t-shirts-217604-1585890869.jpg",
+//         img4: "https://images.bewakoof.com/t540/blue-haze-half-sleeve-t-shirt-men-s-plain-t-shirts-217604-1585890877.jpg"
+//     },
+//     {
+//         img_main: "https://images.bewakoof.com/t540/pineapple-yellow-half-sleeve-t-shirt-men-s-plain-t-shirts-231522-1585315740.jpg",
+//         img1: "https://images.bewakoof.com/t540/pineapple-yellow-half-sleeve-t-shirt-men-s-plain-t-shirts-231522-1585315740.jpg",
+//         img2: "https://images.bewakoof.com/t540/pineapple-yellow-half-sleeve-t-shirt-men-s-plain-t-shirts-231522-1585315743.jpg",
+//         img3: "https://images.bewakoof.com/t540/pineapple-yellow-half-sleeve-t-shirt-men-s-plain-t-shirts-231522-1585315746.jpg",
+//         img4: "https://images.bewakoof.com/t540/pineapple-yellow-half-sleeve-t-shirt-men-s-plain-t-shirts-231522-1585315748.jpg"
+//     },
+//     {
+//         img_main: "https://images.bewakoof.com/t540/beach-blue-half-sleeve-t-shirt-329407-1635870362-1.jpg",
+//         img1: "https://images.bewakoof.com/t540/beach-blue-half-sleeve-t-shirt-329407-1635870362-1.jpg",
+//         img2: "https://images.bewakoof.com/t540/beach-blue-half-sleeve-t-shirt-329407-1635870365-2.jpg",
+//         img3: "https://images.bewakoof.com/t540/beach-blue-half-sleeve-t-shirt-329407-1635870369-3.jpg",
+//         img4: "https://images.bewakoof.com/t540/beach-blue-half-sleeve-t-shirt-329407-1635870372-4.jpg"
+//     },
 
-]
+// ]
 
 var main_image = document.createElement("img");
 main_image.id = "main_image"
-main_image.src = image_collection[0].img_main;
+main_image.src = image_show_case.imgUrl;
 var main_div = document.getElementById("image_containt");
 
 main_div.append(main_image)
-var icons = image_collection[0];
-
 //first image_icon;
 var icon_div = document.getElementById("small_icon");
 var bt1 = document.createElement("button");
 bt1.id = "button_1"
 var image1 = document.createElement("img");
 image1.id = "image1"
-image1.src = icons.img1;
+image1.src = image_show_case.imgUrl;
 bt1.append(image1);
 
 //second image_icon
@@ -370,7 +374,7 @@ var bt2 = document.createElement("button");
 bt2.id = "button_2"
 var image2 = document.createElement("img");
 image2.id = "image2"
-image2.src = icons.img2;
+image2.src = image_show_case.imgUrl;
 bt2.append(image2);
 
 //third image_icon;
@@ -379,7 +383,7 @@ var bt3 = document.createElement("button");
 bt3.id = "button_3"
 var image3 = document.createElement("img");
 image3.id = "image3"
-image3.src = icons.img3;
+image3.src = image_show_case.imgUrl;
 bt3.append(image3);
 
 //fourth image_icon
@@ -388,214 +392,214 @@ var bt4 = document.createElement("button");
 bt4.id = "button_4"
 var image4 = document.createElement("img");
 image4.id = "image4"
-image4.src = icons.img4;
+image4.src = image_show_case.imgUrl;
 bt4.append(image4);
 icon_div.append(bt1, bt2, bt3, bt4)
 
 //when the color is not selected
 document.getElementById("button_1").addEventListener("click", function () {
-    document.getElementById("main_image").src = image_collection[0].img1
+    document.getElementById("main_image").src = image_show_case.imgUrl
 })
 
 document.getElementById("button_2").addEventListener("click", function () {
-    console.log("hi");
-    document.getElementById("main_image").src = image_collection[0].img2
+
+    document.getElementById("main_image").src = image_show_case.imgUrl;
 })
 
 document.getElementById("button_3").addEventListener("click", function () {
-    document.getElementById("main_image").src = image_collection[0].img3
+    document.getElementById("main_image").src = image_show_case.imgUrl
 })
 
 document.getElementById("button_4").addEventListener("click", function () {
-    document.getElementById("main_image").src = image_collection[0].img4
+    document.getElementById("main_image").src = image_show_case.imgUrl
 })
 
 //first color selection
 document.getElementById("bt1").addEventListener("click", function () {
-    display_image_onclick("bt1", image_collection[0])
+    display_image_onclick("bt1", image_show_case)
 
 
     document.getElementById("button_1").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[0].img1
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_2").addEventListener("click", function () {
         console.log("hi");
-        document.getElementById("main_image").src = image_collection[0].img2
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_3").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[0].img3
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_4").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[0].img4
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
-    add_to_cart(image_collection[0]);
+    // add_to_cart(image_collection[0]);
 
 })
 
 //second color selection
 document.getElementById("bt2").addEventListener("click", function () {
-    display_image_onclick("bt2", image_collection[1])
+    display_image_onclick("bt2", image_show_case)
 
     document.getElementById("button_1").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[1].img1
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_2").addEventListener("click", function () {
-        console.log("hi");
-        document.getElementById("main_image").src = image_collection[1].img2
+
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_3").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[1].img3
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_4").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[1].img4
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
-    add_to_cart(image_collection[1]);
+
 })
 
 
 //third color selection
 document.getElementById("bt3").addEventListener("click", function () {
-    display_image_onclick("bt3", image_collection[2])
+    display_image_onclick("bt3", image_show_case)
 
     document.getElementById("button_1").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[2].img1
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_2").addEventListener("click", function () {
         console.log("hi");
-        document.getElementById("main_image").src = image_collection[2].img2
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_3").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[2].img3
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_4").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[2].img4
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
-    add_to_cart(image_collection[2]);
+
 })
 
 
 //fourth color selection
 document.getElementById("bt4").addEventListener("click", function () {
-    display_image_onclick("bt4", image_collection[3])
+    display_image_onclick("bt4", image_show_case)
 
     document.getElementById("button_1").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[3].img1
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_2").addEventListener("click", function () {
-        console.log("hi");
-        document.getElementById("main_image").src = image_collection[3].img2
+
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_3").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[3].img3
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_4").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[3].img4
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
-    add_to_cart(image_collection[3]);
+
 })
 
 
 //fifth color selection
 document.getElementById("bt5").addEventListener("click", function () {
-    display_image_onclick("bt5", image_collection[4])
+    display_image_onclick("bt5", image_show_case)
 
     document.getElementById("button_1").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[4].img1
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_2").addEventListener("click", function () {
         console.log("hi");
-        document.getElementById("main_image").src = image_collection[4].img2
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_3").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[4].img3
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_4").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[4].img4
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
-    add_to_cart(image_collection[4]);
+
 
 })
 
 //sixth color selection
 document.getElementById("bt6").addEventListener("click", function () {
-    display_image_onclick("bt6", image_collection[5])
+    display_image_onclick("bt6", image_show_case)
 
     document.getElementById("button_1").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[5].img1
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_2").addEventListener("click", function () {
-        console.log("hi");
-        document.getElementById("main_image").src = image_collection[5].img2
+
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_3").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[5].img3
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_4").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[5].img4
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
-    add_to_cart(image_collection[5]);
+
 })
 
 // seventh color selection
 document.getElementById("bt7").addEventListener("click", function () {
-    display_image_onclick("bt7", image_collection[6])
+    display_image_onclick("bt7", image_show_case)
     document.getElementById("button_1").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[6].img1
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_2").addEventListener("click", function () {
         console.log("hi");
-        document.getElementById("main_image").src = image_collection[6].img2
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_3").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[6].img3
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_4").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[6].img4
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
-    add_to_cart(image_collection[6]);
+
 })
 
 // eigth color sselection
 document.getElementById("bt8").addEventListener("click", function () {
-    display_image_onclick("bt8", image_collection[7])
+    display_image_onclick("bt8", image_show_case)
     document.getElementById("button_1").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[7].img1
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_2").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[7].img2
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_3").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[7].img3
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
 
     document.getElementById("button_4").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_collection[7].img4
+        document.getElementById("main_image").src = image_show_case.imgUrl
     })
-    add_to_cart(image_collection[7]);
+
 
 })
 
@@ -603,11 +607,11 @@ document.getElementById("bt8").addEventListener("click", function () {
 //function to display the images in their respectie places
 function display_image_onclick(k, item) {
     document.getElementById(k).style.border = "5px solid green";
-    document.getElementById("main_image").src = item.img_main;
-    document.getElementById("image1").src = item.img1;
-    document.getElementById("image2").src = item.img2;
-    document.getElementById("image3").src = item.img3;
-    document.getElementById("image4").src = item.img4;
+    document.getElementById("main_image").src = item.imgUrl;
+    document.getElementById("image1").src = item.imgUrl;
+    document.getElementById("image2").src = item.imgUrl;
+    document.getElementById("image3").src = item.imgUrl;
+    document.getElementById("image4").src = item.imgUrl;
 }
 
 //hover effect for "button one" in image icons left most
@@ -654,13 +658,9 @@ document.getElementById("button_4").addEventListener("mouseleave", function () {
 
 })
 
-//click on cart
-function add_to_cart(ele) {
-    document.getElementById("cart").addEventListener("click", function () {
-        cart_arr.push(ele);
-        localStorage.setItem("cart_local", JSON.stringify(cart_arr))
-        //console.log(ele)
-        console.log(cart_arr)
-    })
 
-}
+//getting and displaying text data  localStorage.getItem("image_show_case")
+
+document.getElementById("name_tag").textContent = image_show_case.name;
+document.getElementById("price_tag").textContent = image_show_case.price;
+document.getElementById("price_tag").textContent = image_show_case.cutprice;

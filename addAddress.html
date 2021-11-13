@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <style>
+         input
+         {
+             padding: 15px;
+             width: 30%;
+         }
+         button
+         {
+             padding: 15px;
+             width: 30%;
+             display: inline;
+         }
+          
+      </style>
+</head>
+<body>
+    <h1>Address</h1>
+    <p>Pinecode</p>
+    <input id="Pinecode" type="text" placeholder="Pinecode"/>
+
+    <P>Address</P>
+    <input id="Address"   type="Address" placeholder="fulladress">
+
+    <p>Locality</p>
+    <input id="Locality"  type="text" placeholder="Locality">
+
+     <div  >
+         <p>City</p>
+         <input id="City" type="text" placeholder="city">
+
+         <p>state</p>
+         <input id="State" type="text" placeholder="State">
+     </div>
+
+     <p>Country</p>
+     <input id = "Country"  type="text" placeholder="country">
+
+     <p>Phone No</p>
+     <input type="number" id="number">
+
+     <Button id = "SAVE">SAVE</Button>
+</body>
+</html>
+
+<script>
+   
+
+    
+
+   var Address = [];
+    document.getElementById("SAVE").addEventListener("click",function(){ 
+    var a =  document.getElementById("Pinecode").value;
+    var b = document.getElementById("Address").value;
+    var c = document.getElementById("Locality").value;
+    var d= document.getElementById("City").value;
+    var e = document.getElementById("State").value;
+    var f = document.getElementById("Country").value;
+    var g = document.getElementById("number").value;
+             Address.push(a,b,c,d,e,f,g); 
+             localStorage.setItem("Address",JSON.stringify(Address));
+             alert("Address Has Been Added");
+    })
+   
+</script>

@@ -18,7 +18,7 @@
 
         
       #mainDiv {
-        border: 1px solid slateblue;
+        
         display: grid;
         grid-template-columns: 20% 80%;
         margin-top: 40px;
@@ -27,7 +27,7 @@
 
       #leftDiv {
         height: 700px;
-        border: 1px solid red;
+        
         overflow: scroll;
         margin-left: 20px;
       }
@@ -35,7 +35,7 @@
         display: grid;
         grid-template-columns: 33% 33% 33%;
         height: 700px;
-        border: 1px solid red;
+        
         overflow: scroll;
         justify-content: center;
         margin-left: 30px;
@@ -51,7 +51,7 @@
                 display: grid;
                 row-gap: 20px;
                 
-                border: 1px solid red;
+                
                 grid-template-columns: 50% 50%;
                 justify-content: space-around;
             }
@@ -163,83 +163,81 @@
     </style>
   </head>
   <body>
-     <header class="main-header">
-        <nav class="top-nav">
-            <div class="topnave">
-                <ul class="top-nav-items">
-                    <li class="top-nav-item">
-                        <a href="#">
-                            Offer
-                        </a>
-                    </li>
-                    <li class="top-nav-item">
-                        <a href="#">Facbook</a>
-                    </li>
-                    <li class="top-nav-item">
-                        <a href="#">Download App</a>
-                    </li>
-                    <li class="top-nav-item">
-                        <a href="#">
-                            TriBe Membership
-                        </a>
-                    </li>
-                    <li class="top-nav-item">
-                        <a href="#">
-                            Contact Us
-                        </a>
+   <header class="main-header">
+      <nav class="top-nav">
+        <div class="topnave">
+          <ul class="top-nav-items">
+            <li class="top-nav-item">
+              <a> Offer </a>
+            </li>
+            <li class="top-nav-item">
+              <a>Facbook</a>
+            </li>
+            <li class="top-nav-item">
+              <a>Download App</a>
+            </li>
+            <li class="top-nav-item">
+              <a> TriBe Membership </a>
+            </li>
+            <li class="top-nav-item">
+              <a> Contact Us </a>
+            </li>
+            <li class="top-nav-item">
+              <a href="http://" target="_blank" rel="noopener noreferrer"
+                >Track Order</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
 
-                    </li>
-                    <li class="top-nav-item">
-                        <a href="http://" target="_blank" rel="noopener noreferrer">Track Order</a>
-                    </li>
-                </ul>
+      <div class="brand-logo">
+        <a class="main-header_brand">
+          <img
+            src="https://images.bewakoof.com/logos/bewakoof-logo-og.png"
+            alt="logo"
+            srcset=""
+          />
+        </a>
+      </div>
+      <div>
+        <ul>
+          <li class="main-nav_item">
+            <a>Man</a>
+          </li>
+          <li class="main-nav_item">
+            <a>Women</a>
+          </li>
+        </ul>
+      </div>
+      <nav class="main-nav-1">
+        <ul class="main-nav_items">
+          <li class="main-nav_item">
+            <div class="box">
+              <i class="fa fa-search" aria-hidden="true"></i>
+
+              <input
+                type="text"
+                name=""
+                placeholder="search by product,cataegory"
+              />
             </div>
-        </nav>
-
-        <div class="brand-logo">
-            <a href="" class="main-header_brand">
-                <img src="https://images.bewakoof.com/logos/bewakoof-logo-og.png" alt="logo" srcset="">
+          </li>
+          <li class="main-nav_item">
+            <a>Login</a>
+          </li>
+          <li class="main-nav_item">
+            <a id="hart">
+              <i class="far fa-heart"></i>
             </a>
-        </div>
-        <div>
-            <ul>
-                <li class="main-nav_item">
-                    <a href="">Man</a>
-                </li>
-                <li class="main-nav_item">
-                    <a href="">Women</a>
-                </li>
-            </ul>
-        </div>
-        <nav class="main-nav">
-            <ul class="main-nav_items">
-
-                <li class="main-nav_item">
-                    <div class="box">
-
-                        <i class="fa fa-search" aria-hidden="true"></i>
-
-                        <input type="text" name="" placeholder="search by product,cataegory">
-
-                    </div>
-                </li>
-                <li class="main-nav_item">
-                    <a href="">Login</a>
-
-                </li>
-                <li class="main-nav_item">
-                    <a href="#">
-                        <i id="hart" class="far fa-heart"></i>
-                    </a>
-                </li>
-                <li class="main-nav_item">
-                    <a href="#">
-                        <i id="bag" class="fas fa-shopping-bag"></i>
-                    </a>
-                </li>
-
-            </ul>
-        </nav>
+          </li>
+          <li class="main-nav_item">
+            <a id="bag">
+              <i class="fas fa-shopping-bag"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
      
 
@@ -772,8 +770,12 @@
         cutprice:249,
       },
     ]
-  var dataArray =[];
+  
+    
+    
+    var dataArray =[];
   var WishList = [];
+  var img = [];
     display(dataOfProduct);
 
     
@@ -849,6 +851,13 @@
     var img = document.createElement("img");
     img.setAttribute("src", item.imgUrl);
     img.setAttribute("id","img");
+    img.addEventListener("click",function(){
+      
+      localStorage.setItem("img",JSON.stringify(item));
+      window.location.href="dummyShowCase.html"
+
+      
+    })
 
     var button = document.createElement("button");
     button.setAttribute("id","button")
@@ -919,4 +928,6 @@
    document.querySelector("#bag").addEventListener("click",function(){
     window.location.href = "bag.html"
   })
+
+  document.querySelector
 </script>
