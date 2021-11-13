@@ -264,3 +264,7 @@
 #location_div {
   border: 1px solid transparent;
 }
+
+#image_containt > img {
+  margin: auto auto;
+}

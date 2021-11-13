@@ -1,12 +1,12 @@
 var arr_color_name = ["white", "Black", "Light nevyblue", "Maroon red", "Smoky white", "Sky blue", "yellow", "water"];
 
- 
-var cart_arr = [] || localStorage.getItem("img");
+
+// var cart_arr = [] || localStorage.getItem("img");
 
 
- 
-var cart_arr = JSON.parse(localStorage.getItem("image_show_case"));
- 
+
+var cart_arr = JSON.parse(localStorage.getItem("img"));;
+
 //function for highlite color
 function color_border(x) {
     x.style.border = "4px solid teal";
@@ -355,7 +355,7 @@ document.getElementById("btn").addEventListener("click", function () {
 
 var main_image = document.createElement("img");
 main_image.id = "main_image"
-main_image.src = image_show_case.imgUrl;
+main_image.src = cart_arr.imgUrl;
 var main_div = document.getElementById("image_containt");
 
 main_div.append(main_image)
@@ -365,7 +365,7 @@ var bt1 = document.createElement("button");
 bt1.id = "button_1"
 var image1 = document.createElement("img");
 image1.id = "image1"
-image1.src = image_show_case.imgUrl;
+image1.src = cart_arr.imgUrl;
 bt1.append(image1);
 
 //second image_icon
@@ -374,7 +374,7 @@ var bt2 = document.createElement("button");
 bt2.id = "button_2"
 var image2 = document.createElement("img");
 image2.id = "image2"
-image2.src = image_show_case.imgUrl;
+image2.src = cart_arr.imgUrl;
 bt2.append(image2);
 
 //third image_icon;
@@ -383,7 +383,7 @@ var bt3 = document.createElement("button");
 bt3.id = "button_3"
 var image3 = document.createElement("img");
 image3.id = "image3"
-image3.src = image_show_case.imgUrl;
+image3.src = cart_arr.imgUrl;
 bt3.append(image3);
 
 //fourth image_icon
@@ -392,48 +392,48 @@ var bt4 = document.createElement("button");
 bt4.id = "button_4"
 var image4 = document.createElement("img");
 image4.id = "image4"
-image4.src = image_show_case.imgUrl;
+image4.src = cart_arr.imgUrl;
 bt4.append(image4);
 icon_div.append(bt1, bt2, bt3, bt4)
 
 //when the color is not selected
 document.getElementById("button_1").addEventListener("click", function () {
-    document.getElementById("main_image").src = image_show_case.imgUrl
+    document.getElementById("main_image").src = cart_arr.imgUrl
 })
 
 document.getElementById("button_2").addEventListener("click", function () {
 
-    document.getElementById("main_image").src = image_show_case.imgUrl;
+    document.getElementById("main_image").src = cart_arr.imgUrl;
 })
 
 document.getElementById("button_3").addEventListener("click", function () {
-    document.getElementById("main_image").src = image_show_case.imgUrl
+    document.getElementById("main_image").src = cart_arr.imgUrl
 })
 
 document.getElementById("button_4").addEventListener("click", function () {
-    document.getElementById("main_image").src = image_show_case.imgUrl
+    document.getElementById("main_image").src = cart_arr.imgUrl
 })
 
 //first color selection
 document.getElementById("bt1").addEventListener("click", function () {
-    display_image_onclick("bt1", image_show_case)
+    display_image_onclick("bt1", cart_arr)
 
 
     document.getElementById("button_1").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_2").addEventListener("click", function () {
         console.log("hi");
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_3").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_4").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     // add_to_cart(image_collection[0]);
@@ -442,23 +442,23 @@ document.getElementById("bt1").addEventListener("click", function () {
 
 //second color selection
 document.getElementById("bt2").addEventListener("click", function () {
-    display_image_onclick("bt2", image_show_case)
+    display_image_onclick("bt2", cart_arr)
 
     document.getElementById("button_1").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_2").addEventListener("click", function () {
 
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_3").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_4").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
 })
@@ -466,23 +466,23 @@ document.getElementById("bt2").addEventListener("click", function () {
 
 //third color selection
 document.getElementById("bt3").addEventListener("click", function () {
-    display_image_onclick("bt3", image_show_case)
+    display_image_onclick("bt3", cart_arr)
 
     document.getElementById("button_1").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_2").addEventListener("click", function () {
         console.log("hi");
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_3").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_4").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
 })
@@ -490,23 +490,23 @@ document.getElementById("bt3").addEventListener("click", function () {
 
 //fourth color selection
 document.getElementById("bt4").addEventListener("click", function () {
-    display_image_onclick("bt4", image_show_case)
+    display_image_onclick("bt4", cart_arr)
 
     document.getElementById("button_1").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_2").addEventListener("click", function () {
 
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_3").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_4").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
 })
@@ -514,23 +514,23 @@ document.getElementById("bt4").addEventListener("click", function () {
 
 //fifth color selection
 document.getElementById("bt5").addEventListener("click", function () {
-    display_image_onclick("bt5", image_show_case)
+    display_image_onclick("bt5", cart_arr)
 
     document.getElementById("button_1").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_2").addEventListener("click", function () {
-        console.log("hi");
-        document.getElementById("main_image").src = image_show_case.imgUrl
+
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_3").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_4").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
 
@@ -538,66 +538,66 @@ document.getElementById("bt5").addEventListener("click", function () {
 
 //sixth color selection
 document.getElementById("bt6").addEventListener("click", function () {
-    display_image_onclick("bt6", image_show_case)
+    display_image_onclick("bt6", cart_arr)
 
     document.getElementById("button_1").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_2").addEventListener("click", function () {
 
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_3").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_4").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
 })
 
 // seventh color selection
 document.getElementById("bt7").addEventListener("click", function () {
-    display_image_onclick("bt7", image_show_case)
+    display_image_onclick("bt7", cart_arr)
     document.getElementById("button_1").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_2").addEventListener("click", function () {
         console.log("hi");
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_3").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_4").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
 })
 
 // eigth color sselection
 document.getElementById("bt8").addEventListener("click", function () {
-    display_image_onclick("bt8", image_show_case)
+    display_image_onclick("bt8", cart_arr)
     document.getElementById("button_1").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_2").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_3").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
     document.getElementById("button_4").addEventListener("click", function () {
-        document.getElementById("main_image").src = image_show_case.imgUrl
+        document.getElementById("main_image").src = cart_arr.imgUrl
     })
 
 
