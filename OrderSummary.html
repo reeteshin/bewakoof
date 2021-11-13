@@ -117,7 +117,7 @@
                 <p id="save">You Save <span class="yousave"></span> on this order</p>
                 <div id="total">
                      
-                    <button>CLICK TO PAY<p  id="totalprice"></p></button>
+                    <button id = "buttonToPay">CLICK TO PAY<p  id="totalprice"></p></button>
                 </div>
 
             </div>
@@ -143,8 +143,12 @@
     document.querySelector(".totalmrp").textContent = totalSum;
     document.querySelector(".delivery").textContent = "Free"
     document.querySelector(".bagdiscount").textContent = `Rs${bagdiscount || 0}`;
-    document.querySelector(".subtotal").textContent = `${totalSum - bagdiscount}`;
+    document.querySelector(".subtotal").textContent = `${totalSum}`;
     document.querySelector(".yousave").textContent = `Rs${bagdiscount}`;
 
-    document.querySelector("#totalprice").textContent = `${totalSum - bagdiscount}`;
+    document.querySelector("#totalprice").textContent = `${totalSum}`;
+
+    document.getElementById("buttonToPay").addEventListener("click",function(){
+        window.location.href = "paymentPage.html"
+    })
 </script>
