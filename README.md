@@ -72,17 +72,15 @@
  
 
 
-
-<!-- 
+ 
 ## Creators  🤝🏻	
 
-#### Mayuri  [GitHub](https://github.com/mayuriwasu1) :octocat:
+#### sandeep Kumar Murmu  [GitHub](https://github.com/sandeepKumarMurmu) :octocat:
 
-#### Kavya [GitHub](https://github.com/kavya-2021) :octocat:
+#### sahil garg [GitHub](https://github.com/sahilgarg29) :octocat:
 
 #### Reetesh  [GitHub](https://github.com/Reeteshin) :octocat:
-
-#### Aswin [GitHub](https://github.com/AswinAnand66) :octocat: -->
+  
 
 
 
