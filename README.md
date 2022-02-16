@@ -5,30 +5,33 @@
 
 
 ##### This is clone website of Bewakoof.com. Bewakoof is an ecommerse website where user can buy all kinds of Wear products.
----
+
+
+
 ## [Deployement ](https://inspiring-easley-d572d0.netlify.app/)🔗
----
+
  
 ## Tech Stack 🔧
----
+
+
 #### Front-end
 - `CSS`
 - `JavaScript`
 - `HTML`
  
----
+
+
 ## Features 
 ##### - Google Authentication.
 ##### - User can buy any type of Wear product.
 ##### - They can use this website from any device.
 ##### - Users can sort & filter different kinds of products according to brands, price range, discount, benefits and active ingredients.
 ##### - Users can add product to wishlist.
----
-## Page and Responsibilities 
----
+
+ 
 
 - **Home Page**
-##### here is the landing page of purplle clone
+##### here is the landing page of Bewakoof clone
 ![Landing Page](https://github.com/kavya-2021/Purplle_Replica/blob/main/public/image/landing_page.png)
 
 ---
