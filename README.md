@@ -33,7 +33,7 @@
 
 **Home Page**
 ##### here is the landing page of Bewakoof clone
-![Landing Page](https://github.com/kavya-2021/Purplle_Replica/blob/main/public/image/landing_page.png)
+![Landing Page]()
 
 ---
  
