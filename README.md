@@ -33,7 +33,7 @@
 
 **Home Page**
 ##### here is the landing page of Bewakoof clone
-![Landing Page]()
+![Landing Page](https://github.com/reeteshin/bewakoof/blob/main/img/Website-Screen-Shorts/Screenshot%20(4).png)
 
 ---
  
