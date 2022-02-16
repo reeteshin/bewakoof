@@ -22,62 +22,59 @@
 
 
 ## Features 
-##### - Google Authentication.
+##### - User can Buy wears For man & Woman
 ##### - User can buy any type of Wear product.
 ##### - They can use this website from any device.
 ##### - Users can sort & filter different kinds of products according to brands, price range, discount, benefits and active ingredients.
 ##### - Users can add product to wishlist.
+ 
 
  
 
-- **Home Page**
+**Home Page**
 ##### here is the landing page of Bewakoof clone
 ![Landing Page](https://github.com/kavya-2021/Purplle_Replica/blob/main/public/image/landing_page.png)
 
 ---
-- **Reponsive Home Page**
-##### User Can use this website irrespective of screen sizes
-
-![Responsive](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/responsive.png)
-
+ 
 ---
 - **login Page**
 
-![Sign In Page](https://github.com/kavya-2021/Purplle_Replica/blob/main/public/image/login.png)
+![Sign In Page]()
 
 
 ---
 
 - **Product Page**
 ##### Here user can filter/Sort the products according to choice
-![Product Category Page](https://github.com/kavya-2021/Purplle_Replica/blob/main/public/image/product.png)
+![Product Category Page]( )
 
 ---
 
 - **Product Description Page**
 ##### Here User can get more information about product
-![Product Details Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/prod_desc.png)
+![Product Details Page]( )
 
 ---
 - **Cart Page**
 ##### From here user can add and remove products from cart
-![Cart Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/cart_page.png)
+![Cart Page]( )
 
 ---
 - **Wish List Page**
 ##### here users can save their favorite products.
-![Wish List](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/wishlist.png)
+![Wish List]( )
 
 ---
 
 - **Checkout Page**
 ##### Here user can add address 
-![Checkout Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/adress.png)
+![Checkout Page]( )
 
 ---
 - **Payment Page**
 ##### here user will have to fill their payment details then they will be notified that their order has been placed.
-![Payment Page](https://github.com/mayuriwasu1/purplle_clone/blob/main/image/pay.png)
+![Payment Page]( )
 
 ---
 
