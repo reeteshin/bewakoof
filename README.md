@@ -29,52 +29,41 @@
 ##### - Users can add product to wishlist.
  
 
- 
+
+<hr/>
 
 **Home Page**
 ##### here is the landing page of Bewakoof clone
-![Landing Page](https://github.com/reeteshin/bewakoof/blob/main/img/Website-Screen-Shorts/Screenshot%20(4).png)
+![Landing Page](https://github.com/reeteshin/bewakoof/blob/main/img/Website-Screen-Shorts/Home.png)
 
----
  
----
-- **login Page**
-
-![Sign In Page]()
-
-
----
+ 
+ 
 
 - **Product Page**
 ##### Here user can filter/Sort the products according to choice
-![Product Category Page]( )
+![Product Category Page](https://github.com/reeteshin/bewakoof/blob/main/img/Website-Screen-Shorts/Product.png)
 
 ---
 
-- **Product Description Page**
-##### Here User can get more information about product
-![Product Details Page]( )
+ 
 
 ---
 - **Cart Page**
-##### From here user can add and remove products from cart
-![Cart Page]( )
+##### From here user can add products from cart
+![Cart Page](https://github.com/reeteshin/bewakoof/blob/main/img/Website-Screen-Shorts/Cart.png )
 
 ---
 - **Wish List Page**
 ##### here users can save their favorite products.
-![Wish List]( )
+![Wish List](https://github.com/reeteshin/bewakoof/blob/main/img/Website-Screen-Shorts/Wishlist.png)
 
 ---
-
-- **Checkout Page**
-##### Here user can add address 
-![Checkout Page]( )
-
+ 
 ---
 - **Payment Page**
 ##### here user will have to fill their payment details then they will be notified that their order has been placed.
-![Payment Page]( )
+![Payment Page](https://github.com/reeteshin/bewakoof/blob/main/img/Website-Screen-Shorts/Payment.png)
 
 ---
 
