@@ -1,8 +1,9 @@
-![image](https://media4.ppl-media.com/static/purplle/img/purplle-logo-1.svg)
+![image](https://images.bewakoof.com/web/bewakoof-primary-logo-white-bg-2x-1635745564.png)
 
 
 # BewaKoof.com-Website-Clone 
----
+
+
 ##### This is clone website of Bewakoof.com. Bewakoof is an ecommerse website where user can buy all kinds of Wear products.
 ---
 ## [Deployement ](https://inspiring-easley-d572d0.netlify.app/)🔗
